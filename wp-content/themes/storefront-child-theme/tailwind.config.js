@@ -36,9 +36,9 @@ module.exports = {
         },
       },
       fontFamily: {
-        'sans': ['sofia-pro', 'sans-serif'],
-        'serif': ['sofia-pro', 'sans-serif'],
-        'mono': ['sofia-pro', 'sans-serif']
+        'sans': ['sofia-pro-light', 'sans-serif'],
+        'serif': ['sofia-pro-light', 'sans-serif'],
+        'mono': ['sofia-pro-light', 'sans-serif']
       },
     },
     screens: {
@@ -46,7 +46,7 @@ module.exports = {
       'md': '768px',
       'lg': '1024px',
       'xl': '1280px',
-      '2xl': '1536px',
+      '2xl': '1360px',
     },
   },
   variants: {},

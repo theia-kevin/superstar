@@ -50,7 +50,7 @@ add_action('login_enqueue_scripts', 'modifyAdminLoginImages');
 
 function hideAdminBar()
 {
-    add_filter('show_admin_bar', '__return_true');
+    add_filter('show_admin_bar', '__return_false');
 }
 
 add_action('after_setup_theme', 'hideAdminBar');

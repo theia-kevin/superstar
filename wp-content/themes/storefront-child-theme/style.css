@@ -21,11 +21,18 @@ Images License: GNU General Public License v2 or later
 */
 
 body, button, input, select, textarea {
-  font-family: "sofia-pro", sans-serif !important;
+  font-family: "sofia-pro-light", sans-serif !important;
 }
 
 a:focus, button:focus, .button.alt:focus, input:focus, textarea:focus, input[type="button"]:focus, input[type="reset"]:focus, input[type="submit"]:focus, input[type="email"]:focus, input[type="tel"]:focus, input[type="url"]:focus, input[type="password"]:focus, input[type="search"]:focus {
   outline-color: transparent !important;
+}
+
+.home .col-full {
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
 }
 
 /*# sourceMappingURL=style.css.map*/
