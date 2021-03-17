@@ -1,0 +1,15 @@
+@import 'variables';
+@import 'fonts';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+//@tailwind screens;
+@import 'mixins';
+
+html, body {
+  @apply h-full m-0;
+}
+
+body {
+  @apply debug-screens relative;
+}

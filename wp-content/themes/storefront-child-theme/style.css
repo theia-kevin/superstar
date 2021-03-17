@@ -1,7 +1,7 @@
 /*
-Theme Name:   	Storefront Child Theme
-Theme URI:    	https://github.com/stuartduff/storefront-child-theme
-Author:       	Stuart Duff
+Theme Name:     Storefront Child Theme
+Theme URI:      https://github.com/stuartduff/storefront-child-theme
+Author:         Stuart Duff
 Author URI:     http://stuartduff.com
 Template:     	storefront
 Description:  	This is a blank child theme for WooThemes StoreFront theme
@@ -19,6 +19,13 @@ along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normali
 FontAwesome License: SIL Open Font License - http://scripts.sil.org/OFL
 Images License: GNU General Public License v2 or later
 */
-/*
- * Add your own custom css below this text.
- */
+
+body, button, input, select, textarea {
+  font-family: "sofia-pro", sans-serif !important;
+}
+
+a:focus, button:focus, .button.alt:focus, input:focus, textarea:focus, input[type="button"]:focus, input[type="reset"]:focus, input[type="submit"]:focus, input[type="email"]:focus, input[type="tel"]:focus, input[type="url"]:focus, input[type="password"]:focus, input[type="search"]:focus {
+  outline-color: transparent !important;
+}
+
+/*# sourceMappingURL=style.css.map*/

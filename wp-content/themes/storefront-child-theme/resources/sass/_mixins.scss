@@ -1,0 +1,168 @@
+$base-size: 16px;
+
+@function rem($pixel-size) {
+  @if (unitless($pixel-size)) {
+    $pixel-size: $pixel-size * 1px;
+  }
+  @return $pixel-size / $base-size * 1rem;
+}
+
+@mixin custom-text($minimum, $maximum) {
+  @for $index from $minimum through $maximum {
+    @responsive {
+      .custom-text-#{$index} {
+        font-size: rem($index);
+      }
+    }
+  }
+}
+
+@include custom-text(1, 100);
+
+@mixin custom-height($minimum, $maximum) {
+  @for $index from $minimum through $maximum {
+    @responsive {
+      .custom-h-#{$index} {
+        height: rem($index);
+      }
+    }
+  }
+}
+
+@include custom-height(1, 1000);
+
+@mixin custom-width($minimum, $maximum) {
+  @for $index from $minimum through $maximum {
+    @responsive {
+      .custom-w-#{$index} {
+        width: rem($index);
+      }
+    }
+  }
+}
+
+@include custom-width(1, 1000);
+
+@mixin custom-padding($minimum, $maximum) {
+  @for $index from $minimum through $maximum {
+    @responsive {
+      .custom-p-#{$index} {
+        padding: rem($index);
+      }
+    }
+  }
+
+  @for $index from $minimum through $maximum {
+    @responsive {
+      .custom-pt-#{$index} {
+        padding-top: rem($index);
+      }
+    }
+  }
+
+  @for $index from $minimum through $maximum {
+    @responsive {
+      .custom-pr-#{$index} {
+        padding-right: rem($index);
+      }
+    }
+  }
+
+  @for $index from $minimum through $maximum {
+    @responsive {
+      .custom-pb-#{$index} {
+        padding-bottom: rem($index);
+      }
+    }
+  }
+
+  @for $index from $minimum through $maximum {
+    @responsive {
+      .custom-pl-#{$index} {
+        padding-left: rem($index);
+      }
+    }
+  }
+
+  @for $index from $minimum through $maximum {
+    @responsive {
+      .custom-py-#{$index} {
+        padding-top: rem($index);
+        padding-bottom: rem($index);
+      }
+    }
+  }
+
+  @for $index from $minimum through $maximum {
+    @responsive {
+      .custom-px-#{$index} {
+        padding-left: rem($index);
+        padding-right: rem($index);
+      }
+    }
+  }
+}
+
+@include custom-padding(1, 100);
+
+@mixin custom-margin($minimum, $maximum) {
+  @for $index from $minimum through $maximum {
+    @responsive {
+      .custom-p-#{$index} {
+        margin: rem($index);
+      }
+    }
+  }
+
+  @for $index from $minimum through $maximum {
+    @responsive {
+      .custom-pt-#{$index} {
+        margin-top: rem($index);
+      }
+    }
+  }
+
+  @for $index from $minimum through $maximum {
+    @responsive {
+      .custom-pr-#{$index} {
+        margin-right: rem($index);
+      }
+    }
+  }
+
+  @for $index from $minimum through $maximum {
+    @responsive {
+      .custom-pb-#{$index} {
+        margin-bottom: rem($index);
+      }
+    }
+  }
+
+  @for $index from $minimum through $maximum {
+    @responsive {
+      .custom-pl-#{$index} {
+        margin-left: rem($index);
+      }
+    }
+  }
+
+  @for $index from $minimum through $maximum {
+    @responsive {
+      .custom-py-#{$index} {
+        margin-top: rem($index);
+        margin-bottom: rem($index);
+      }
+    }
+  }
+
+  @for $index from $minimum through $maximum {
+    @responsive {
+      .custom-px-#{$index} {
+        margin-left: rem($index);
+        margin-right: rem($index);
+      }
+    }
+  }
+}
+
+@include custom-margin(1, 100);
