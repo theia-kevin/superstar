@@ -56889,15 +56889,27 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vuex__WEBPACK_IMPORTED_MODULE_1__
 
 /***/ }),
 
+/***/ "./resources/sass/mixins.scss":
+/*!************************************!*\
+  !*** ./resources/sass/mixins.scss ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ 0:
-/*!**************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./assets/sass/style.scss ***!
-  \**************************************************************************************/
+/*!*******************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/mixins.scss ./assets/sass/style.scss ***!
+  \*******************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__(/*! C:\laragon\www-theia-2020\superstar\wp-content\themes\storefront-child-theme\resources\js\app.js */"./resources/js/app.js");
 __webpack_require__(/*! C:\laragon\www-theia-2020\superstar\wp-content\themes\storefront-child-theme\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\laragon\www-theia-2020\superstar\wp-content\themes\storefront-child-theme\resources\sass\mixins.scss */"./resources/sass/mixins.scss");
 module.exports = __webpack_require__(/*! C:\laragon\www-theia-2020\superstar\wp-content\themes\storefront-child-theme\assets\sass\style.scss */"./assets/sass/style.scss");
 
 

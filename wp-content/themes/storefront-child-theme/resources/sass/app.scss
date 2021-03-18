@@ -4,7 +4,7 @@
 @tailwind components;
 @tailwind utilities;
 //@tailwind screens;
-@import 'mixins';
+@import 'functions';
 
 html, body {
   @apply h-full m-0;
@@ -12,4 +12,23 @@ html, body {
 
 body {
   @apply debug-screens relative;
+}
+
+.btn-yellow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $jumble;
+  font-size: rem(20);
+  color: $purple-01;
+  background-color: $yellow-01;
+  text-transform: uppercase;
+  padding: rem(3) rem(12);
+  border-radius: rem(10);
+  line-height: 31px;
+  transition: all 0.5s;
+  &:hover {
+    transform: translate(rem(5), rem(-5));
+    @apply shadow-2xl;
+  }
 }

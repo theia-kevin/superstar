@@ -28,9 +28,9 @@ function redirectToCheckoutOnAddToCart(): string
 
 add_filter('woocommerce_add_to_cart_redirect', 'redirectToCheckoutOnAddToCart');
 
-function hideNotifications()
-{
-    add_filter('wc_add_to_cart_message_html', '__return_true');
-}
-
-add_action('init', 'hideNotifications');
+//function hideNotifications()
+//{
+//    add_filter('wc_add_to_cart_message_html', '__return_true');
+//}
+//
+//add_action('init', 'hideNotifications');

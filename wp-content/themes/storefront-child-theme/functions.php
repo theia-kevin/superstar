@@ -18,6 +18,8 @@ function enqueueScripts()
 {
     $mix_manifest = (array)json_decode(file_get_contents(__DIR__ . '/mix-manifest.json'));
 
+    wp_enqueue_style('mixins-css', get_stylesheet_directory_uri() . '/public/css/mixins.css');
+//    wp_enqueue_style('mixins-css', get_stylesheet_directory_uri() . $mix_manifest['/public/css/mixins.css']);
     wp_enqueue_style('app-css', get_stylesheet_directory_uri() . $mix_manifest['/public/css/app.css']);
     wp_enqueue_script('app-js', get_stylesheet_directory_uri() . $mix_manifest['/public/js/app.js'], [], false, true);
 }
@@ -127,3 +129,32 @@ function removeCommentLinksFromAdminBar()
 }
 
 add_action('init', 'removeCommentLinksFromAdminBar');
+
+if (function_exists('acf_add_options_page')) {
+    acf_add_options_page(
+        [
+            'menu_title' => 'CMS',
+            'page_title' => 'CMS',
+            'menu_slug'  => 'cms',
+            'redirect'   => false
+        ]
+    );
+
+//    acf_add_options_sub_page(
+//        [
+//            'menu_title'  => 'Header',
+//            'page_title'  => 'Header',
+//            'menu_slug'   => 'header',
+//            'parent_slug' => 'cms',
+//        ]
+//    );
+//
+//    acf_add_options_sub_page(
+//        [
+//            'menu_title'  => 'Footer',
+//            'page_title'  => 'Footer',
+//            'menu_slug'   => 'footer',
+//            'parent_slug' => 'cms',
+//        ]
+//    );
+}

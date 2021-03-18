@@ -40,22 +40,25 @@
   font-weight: 400;
 }
 
-.font-sofia-pro-light {
-  font-family: 'sofia-pro-light', sans-serif;
+@variants hover {
+  .font-sofia-pro-light {
+    font-family: 'sofia-pro-light', sans-serif;
+  }
+
+  .font-sofia-pro {
+    font-family: 'sofia-pro', sans-serif;
+  }
+
+  .font-sofia-pro-medium {
+    font-family: 'sofia-pro-medium', sans-serif;
+  }
+
+  .font-sofia-pro-bold {
+    font-family: 'sofia-pro-bold', sans-serif;
+  }
+
+  .font-jumble {
+    font-family: 'jumble', sans-serif;
+  }
 }
 
-.font-sofia-pro {
-  font-family: 'sofia-pro', sans-serif;
-}
-
-.font-sofia-pro-medium {
-  font-family: 'sofia-pro-medium', sans-serif;
-}
-
-.font-sofia-pro-bold {
-  font-family: 'sofia-pro-bold', sans-serif;
-}
-
-.font-jumble {
-  font-family: 'jumble', sans-serif;
-}

@@ -17,6 +17,15 @@ module.exports = {
           'blue-01': {
             DEFAULT: '#42CDE2',
           },
+          'blue-02': {
+            DEFAULT: '#0094fc',
+          },
+          'yellow-01': {
+            DEFAULT: '#FBE477',
+          },
+          'purple-01': {
+            DEFAULT: '#6969ff',
+          }
         },
         backgroundColor: {
           ...defaultColors,
@@ -24,6 +33,15 @@ module.exports = {
             'blue-01': {
               DEFAULT: '#42CDE2',
             },
+            'blue-02': {
+              DEFAULT: '#0094fc',
+            },
+            'yellow-01': {
+              DEFAULT: '#FBE477',
+            },
+            'purple-01': {
+              DEFAULT: '#6969ff',
+            }
           },
         },
         borderColor: {
@@ -32,6 +50,15 @@ module.exports = {
             'blue-01': {
               DEFAULT: '#42CDE2',
             },
+            'blue-02': {
+              DEFAULT: '#0094fc',
+            },
+            'yellow-01': {
+              DEFAULT: '#FBE477',
+            },
+            'purple-01': {
+              DEFAULT: '#6969ff',
+            }
           },
         },
       },
@@ -46,10 +73,15 @@ module.exports = {
       'md': '768px',
       'lg': '1024px',
       'xl': '1280px',
-      '2xl': '1360px',
+      '2xl': '1350px',
     },
   },
-  variants: {},
+  variants: {
+    extend: {},
+    fontWeight: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
+    transform: ['hover', 'focus'],
+    overflow: ['hover', 'focus'],
+  },
   plugins: [
     require('@tailwindcss/forms'),
     require('tailwindcss-debug-screens'),

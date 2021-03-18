@@ -44,6 +44,7 @@ mix.setPublicPath('/');
 
 mix.js('resources/js/app.js', 'public/js/app.js')
   .sass('resources/sass/app.scss', 'public/css/app.css')
+  .sass('resources/sass/mixins.scss', 'public/css/mixins.css')
   .sass('assets/sass/style.scss', 'style.css');
 
 if (mix.inProduction()) {

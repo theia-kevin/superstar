@@ -1,0 +1,8 @@
+@import 'variables';
+
+@function rem($pixel-size) {
+  @if (unitless($pixel-size)) {
+    $pixel-size: $pixel-size * 1px;
+  }
+  @return $pixel-size / $base-size * 1rem;
+}
