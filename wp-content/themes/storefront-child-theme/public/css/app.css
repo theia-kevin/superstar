@@ -42,49 +42,82 @@
   font-style: normal;
   font-weight: 400;
 }
+.font-sofia-pro-light {
+  font-family: "sofia-pro-light", sans-serif, sans-serif;
+}
+
+.font-sofia-pro {
+  font-family: "sofia-pro", sans-serif, sans-serif;
+}
+
+.font-sofia-pro-medium {
+  font-family: "sofia-pro-medium", sans-serif, sans-serif;
+}
+
+.font-sofia-pro-bold {
+  font-family: "sofia-pro-bold", sans-serif, sans-serif;
+}
+
+.font-jumble {
+  font-family: "jumble", sans-serif, sans-serif;
+}
+
 /*! tailwindcss v2.0.4 | MIT License | https://tailwindcss.com */
+
 /*! modern-normalize v1.0.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
+
 /*
 Document
 ========
 */
+
 /**
 Use a better box model (opinionated).
 */
+
 *,
 *::before,
 *::after {
 	box-sizing: border-box;
 }
+
 /**
 Use a more readable tab size (opinionated).
 */
+
 :root {
 	-moz-tab-size: 4;
 	-o-tab-size: 4;
 	   tab-size: 4;
 }
+
 /**
 1. Correct the line height in all browsers.
 2. Prevent adjustments of font size after orientation changes in iOS.
 */
+
 html {
 	line-height: 1.15; /* 1 */
 	-webkit-text-size-adjust: 100%; /* 2 */
 }
+
 /*
 Sections
 ========
 */
+
 /**
 Remove the margin in all browsers.
 */
+
 body {
 	margin: 0;
 }
+
 /**
 Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
 */
+
 body {
 	font-family:
 		system-ui,
@@ -97,40 +130,50 @@ body {
 		'Apple Color Emoji',
 		'Segoe UI Emoji';
 }
+
 /*
 Grouping content
 ================
 */
+
 /**
 1. Add the correct height in Firefox.
 2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
 */
+
 hr {
 	height: 0; /* 1 */
 	color: inherit; /* 2 */
 }
+
 /*
 Text-level semantics
 ====================
 */
+
 /**
 Add the correct text decoration in Chrome, Edge, and Safari.
 */
+
 abbr[title] {
 	-webkit-text-decoration: underline dotted;
 	        text-decoration: underline dotted;
 }
+
 /**
 Add the correct font weight in Edge and Safari.
 */
+
 b,
 strong {
 	font-weight: bolder;
 }
+
 /**
 1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
 2. Correct the odd 'em' font sizing in all browsers.
 */
+
 code,
 kbd,
 samp,
@@ -144,15 +187,19 @@ pre {
 		monospace; /* 1 */
 	font-size: 1em; /* 2 */
 }
+
 /**
 Add the correct font size in all browsers.
 */
+
 small {
 	font-size: 80%;
 }
+
 /**
 Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
 */
+
 sub,
 sup {
 	font-size: 75%;
@@ -160,32 +207,40 @@ sup {
 	position: relative;
 	vertical-align: baseline;
 }
+
 sub {
 	bottom: -0.25em;
 }
+
 sup {
 	top: -0.5em;
 }
+
 /*
 Tabular data
 ============
 */
+
 /**
 1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
 2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
 */
+
 table {
 	text-indent: 0; /* 1 */
 	border-color: inherit; /* 2 */
 }
+
 /*
 Forms
 =====
 */
+
 /**
 1. Change the font styles in all browsers.
 2. Remove the margin in Firefox and Safari.
 */
+
 button,
 input,
 optgroup,
@@ -196,102 +251,130 @@ textarea {
 	line-height: 1.15; /* 1 */
 	margin: 0; /* 2 */
 }
+
 /**
 Remove the inheritance of text transform in Edge and Firefox.
 1. Remove the inheritance of text transform in Firefox.
 */
+
 button,
 select { /* 1 */
 	text-transform: none;
 }
+
 /**
 Correct the inability to style clickable types in iOS and Safari.
 */
+
 button,
 [type='button'],
 [type='reset'],
 [type='submit'] {
 	-webkit-appearance: button;
 }
+
 /**
 Remove the inner border and padding in Firefox.
 */
+
 ::-moz-focus-inner {
 	border-style: none;
 	padding: 0;
 }
+
 /**
 Restore the focus styles unset by the previous rule.
 */
+
 :-moz-focusring {
 	outline: 1px dotted ButtonText;
 }
+
 /**
 Remove the additional ':invalid' styles in Firefox.
 See: https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737
 */
+
 :-moz-ui-invalid {
 	box-shadow: none;
 }
+
 /**
 Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
 */
+
 legend {
 	padding: 0;
 }
+
 /**
 Add the correct vertical alignment in Chrome and Firefox.
 */
+
 progress {
 	vertical-align: baseline;
 }
+
 /**
 Correct the cursor style of increment and decrement buttons in Safari.
 */
+
 ::-webkit-inner-spin-button,
 ::-webkit-outer-spin-button {
 	height: auto;
 }
+
 /**
 1. Correct the odd appearance in Chrome and Safari.
 2. Correct the outline style in Safari.
 */
+
 [type='search'] {
 	-webkit-appearance: textfield; /* 1 */
 	outline-offset: -2px; /* 2 */
 }
+
 /**
 Remove the inner padding in Chrome and Safari on macOS.
 */
+
 ::-webkit-search-decoration {
 	-webkit-appearance: none;
 }
+
 /**
 1. Correct the inability to style clickable types in iOS and Safari.
 2. Change font properties to 'inherit' in Safari.
 */
+
 ::-webkit-file-upload-button {
 	-webkit-appearance: button; /* 1 */
 	font: inherit; /* 2 */
 }
+
 /*
 Interactive
 ===========
 */
+
 /*
 Add the correct display in Chrome and Safari.
 */
+
 summary {
 	display: list-item;
 }
+
 /**
  * Manually forked from SUIT CSS Base: https://github.com/suitcss/base
  * A thin layer on top of normalize.css that provides a starting point more
  * suitable for web applications.
  */
+
 /**
  * Removes the default spacing and border for appropriate elements.
  */
+
 blockquote,
 dl,
 dd,
@@ -307,49 +390,60 @@ p,
 pre {
   margin: 0;
 }
+
 button {
   background-color: transparent;
   background-image: none;
 }
+
 /**
  * Work around a Firefox/IE bug where the transparent `button` background
  * results in a loss of the default `button` focus styles.
  */
+
 button:focus {
   outline: 1px dotted;
   outline: 5px auto -webkit-focus-ring-color;
 }
+
 fieldset {
   margin: 0;
   padding: 0;
 }
+
 ol,
 ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
+
 /**
  * Tailwind custom reset styles
  */
+
 /**
  * 1. Use the user's configured `sans` font-family (with Tailwind's default
  *    sans-serif font stack as a fallback) as a sane default.
  * 2. Use Tailwind's default "normal" line-height so the user isn't forced
  *    to override it to ensure consistency even when using the default theme.
  */
+
 html {
   font-family: sofia-pro-light, sans-serif; /* 1 */
   line-height: 1.5; /* 2 */
 }
+
 /**
  * Inherit font-family and line-height from `html` so users can set them as
  * a class directly on the `html` element.
  */
+
 body {
   font-family: inherit;
   line-height: inherit;
 }
+
 /**
  * 1. Prevent padding and border from affecting element width.
  *
@@ -375,6 +469,7 @@ body {
  *
  *    https://github.com/tailwindcss/tailwindcss/pull/116
  */
+
 *,
 ::before,
 ::after {
@@ -383,12 +478,15 @@ body {
   border-style: solid; /* 2 */
   border-color: #e5e7eb; /* 2 */
 }
+
 /*
  * Ensure horizontal rules are visible by default
  */
+
 hr {
   border-top-width: 1px;
 }
+
 /**
  * Undo the `border-style: none` reset that Normalize applies to images so that
  * our `border-{width}` utilities have the expected effect.
@@ -398,32 +496,40 @@ hr {
  *
  * https://github.com/tailwindcss/tailwindcss/issues/362
  */
+
 img {
   border-style: solid;
 }
+
 textarea {
   resize: vertical;
 }
+
 input::-moz-placeholder, textarea::-moz-placeholder {
   opacity: 1;
   color: #9ca3af;
 }
+
 input:-ms-input-placeholder, textarea:-ms-input-placeholder {
   opacity: 1;
   color: #9ca3af;
 }
+
 input::placeholder,
 textarea::placeholder {
   opacity: 1;
   color: #9ca3af;
 }
+
 button,
 [role="button"] {
   cursor: pointer;
 }
+
 table {
   border-collapse: collapse;
 }
+
 h1,
 h2,
 h3,
@@ -433,14 +539,17 @@ h6 {
   font-size: inherit;
   font-weight: inherit;
 }
+
 /**
  * Reset links to optimize for opt-in styling instead of
  * opt-out.
  */
+
 a {
   color: inherit;
   text-decoration: inherit;
 }
+
 /**
  * Reset form element properties that are easy to forget to
  * style explicitly so you don't inadvertently introduce
@@ -448,6 +557,7 @@ a {
  * supplement a partial reset that is already applied by
  * normalize.css.
  */
+
 button,
 input,
 optgroup,
@@ -457,18 +567,21 @@ textarea {
   line-height: inherit;
   color: inherit;
 }
+
 /**
  * Use the configured 'mono' font family for elements that
  * are expected to be rendered with a monospace font, falling
  * back to the system monospace stack if there is no configured
  * 'mono' font family.
  */
+
 pre,
 code,
 kbd,
 samp {
   font-family: sofia-pro-light, sans-serif;
 }
+
 /**
  * Make replaced elements `display: block` by default as that's
  * the behavior you want almost all of the time. Inspired by
@@ -476,6 +589,7 @@ samp {
  *
  * https://github.com/mozdevs/cssremedy/issues/14
  */
+
 img,
 svg,
 video,
@@ -487,17 +601,20 @@ object {
   display: block;
   vertical-align: middle;
 }
+
 /**
  * Constrain images and videos to the parent width and preserve
  * their instrinsic aspect ratio.
  *
  * https://github.com/mozdevs/cssremedy/issues/14
  */
+
 img,
 video {
   max-width: 100%;
   height: auto;
 }
+
 *{
   --tw-shadow: 0 0 #0000;
   --tw-ring-inset: var(--tw-empty,/*!*/ /*!*/);
@@ -507,6 +624,7 @@ video {
   --tw-ring-offset-shadow: 0 0 #0000;
   --tw-ring-shadow: 0 0 #0000;
 }
+
 
       [type='text'],
       [type='email'],
@@ -538,6 +656,7 @@ video {
   font-size: 1rem;
   line-height: 1.5rem;
 }
+
 [type='text']:focus, [type='email']:focus, [type='url']:focus, [type='password']:focus, [type='number']:focus, [type='date']:focus, [type='datetime-local']:focus, [type='month']:focus, [type='search']:focus, [type='tel']:focus, [type='time']:focus, [type='week']:focus, [multiple]:focus, textarea:focus, select:focus{
   outline: 2px solid transparent;
   outline-offset: 2px;
@@ -550,24 +669,30 @@ video {
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
   border-color: #2563eb;
 }
+
 input::-moz-placeholder, textarea::-moz-placeholder{
   color: #6b7280;
   opacity: 1;
 }
+
 input:-ms-input-placeholder, textarea:-ms-input-placeholder{
   color: #6b7280;
   opacity: 1;
 }
+
 input::placeholder, textarea::placeholder{
   color: #6b7280;
   opacity: 1;
 }
+
 ::-webkit-datetime-edit-fields-wrapper{
   padding: 0;
 }
+
 ::-webkit-date-and-time-value{
   min-height: 1.5em;
 }
+
 select{
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");
   background-position: right 0.5rem center;
@@ -577,6 +702,7 @@ select{
   -webkit-print-color-adjust: exact;
           color-adjust: exact;
 }
+
 [multiple]{
   background-image: initial;
   background-position: initial;
@@ -586,6 +712,7 @@ select{
   -webkit-print-color-adjust: unset;
           color-adjust: unset;
 }
+
 
       [type='checkbox'],
       [type='radio']
@@ -611,12 +738,15 @@ select{
   border-color: #6b7280;
   border-width: 1px;
 }
+
 [type='checkbox']{
   border-radius: 0px;
 }
+
 [type='radio']{
   border-radius: 100%;
 }
+
 
       [type='checkbox']:focus,
       [type='radio']:focus
@@ -632,6 +762,7 @@ select{
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
 }
 
+
       [type='checkbox']:checked,
       [type='radio']:checked
     {
@@ -641,12 +772,15 @@ select{
   background-position: center;
   background-repeat: no-repeat;
 }
+
 [type='checkbox']:checked{
   background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");
 }
+
 [type='radio']:checked{
   background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e");
 }
+
 
       [type='checkbox']:checked:hover,
       [type='checkbox']:checked:focus,
@@ -656,6 +790,7 @@ select{
   border-color: transparent;
   background-color: currentColor;
 }
+
 [type='checkbox']:indeterminate{
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 16 16'%3e%3cpath stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8h8'/%3e%3c/svg%3e");
   border-color: transparent;
@@ -665,12 +800,14 @@ select{
   background-repeat: no-repeat;
 }
 
+
       [type='checkbox']:indeterminate:hover,
       [type='checkbox']:indeterminate:focus
     {
   border-color: transparent;
   background-color: currentColor;
 }
+
 [type='file']{
   background: unset;
   border-color: inherit;
@@ -680,6 +817,7 @@ select{
   font-size: unset;
   line-height: inherit;
 }
+
 [type='file']:focus{
   outline: 1px auto -webkit-focus-ring-color;
 }
@@ -801,9 +939,6 @@ select{
 .col-span-12{
   grid-column: span 12 / span 12 !important;
 }
-.m-2{
-  margin: 0.5rem !important;
-}
 .m-\[15px\]{
   margin: 15px !important;
 }
@@ -826,6 +961,12 @@ select{
 .mr-\[30px\]{
   margin-right: 30px !important;
 }
+.ml-\[30px\]{
+  margin-left: 30px !important;
+}
+.ml-\[15px\]{
+  margin-left: 15px !important;
+}
 .flex{
   display: flex !important;
 }
@@ -844,9 +985,6 @@ select{
 .h-\[400px\]{
   height: 400px !important;
 }
-.h-\[200px\]{
-  height: 200px !important;
-}
 .h-\[600px\]{
   height: 600px !important;
 }
@@ -855,6 +993,9 @@ select{
 }
 .h-\[300px\]{
   height: 300px !important;
+}
+.h-\[200px\]{
+  height: 200px !important;
 }
 .h-\[100px\]{
   height: 100px !important;
@@ -867,6 +1008,18 @@ select{
 }
 .h-\[800px\]{
   height: 800px !important;
+}
+.h-\[700px\]{
+  height: 700px !important;
+}
+.h-\[1200px\]{
+  height: 1200px !important;
+}
+.h-\[1000px\]{
+  height: 1000px !important;
+}
+.h-\[900px\]{
+  height: 900px !important;
 }
 .w-full{
   width: 100% !important;
@@ -968,6 +1121,10 @@ select{
   --tw-bg-opacity: 1 !important;
   background-color: rgba(251, 228, 119, var(--tw-bg-opacity)) !important;
 }
+.bg-purple-01{
+  --tw-bg-opacity: 1 !important;
+  background-color: rgba(105, 105, 255, var(--tw-bg-opacity)) !important;
+}
 .bg-blue-02{
   --tw-bg-opacity: 1 !important;
   background-color: rgba(0, 148, 252, var(--tw-bg-opacity)) !important;
@@ -975,10 +1132,6 @@ select{
 .bg-indigo-600{
   --tw-bg-opacity: 1 !important;
   background-color: rgba(79, 70, 229, var(--tw-bg-opacity)) !important;
-}
-.bg-purple-01{
-  --tw-bg-opacity: 1 !important;
-  background-color: rgba(105, 105, 255, var(--tw-bg-opacity)) !important;
 }
 .bg-cover{
   background-size: cover !important;
@@ -1018,6 +1171,10 @@ select{
   padding-left: 24px !important;
   padding-right: 24px !important;
 }
+.py-4{
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
 .px-\[14px\]{
   padding-left: 14px !important;
   padding-right: 14px !important;
@@ -1029,6 +1186,10 @@ select{
 .py-3{
   padding-top: 0.75rem !important;
   padding-bottom: 0.75rem !important;
+}
+.py-\[15px\]{
+  padding-top: 15px !important;
+  padding-bottom: 15px !important;
 }
 .pr-\[60px\]{
   padding-right: 60px !important;
@@ -1339,34 +1500,56 @@ body::before{
   --tw-ring-offset-width: 2px !important;
 }
 @media (min-width: 1280px){
-  .xl\:col-span-5{
+.xl\:absolute{
+    position: absolute !important;
+  }
+.xl\:col-span-5{
     grid-column: span 5 / span 5 !important;
   }
-  .xl\:block{
+.xl\:block{
     display: block !important;
   }
-  .xl\:hidden{
+.xl\:hidden{
     display: none !important;
   }
-  .xl\:h-\[900px\]{
+.xl\:h-\[900px\]{
     height: 900px !important;
   }
-  .xl\:pt-\[300px\]{
+.xl\:pt-\[300px\]{
     padding-top: 300px !important;
   }
-  .xl\:pt-\[600px\]{
+.xl\:pt-\[600px\]{
     padding-top: 600px !important;
   }
-  .xl\:text-\[72px\]{
+.xl\:text-\[72px\]{
     font-size: 72px !important;
   }
-  .xl\:text-\[18px\]{
+.xl\:text-\[18px\]{
     font-size: 18px !important;
   }
-  .xl\:leading-\[80px\]{
+.xl\:leading-\[80px\]{
     line-height: 80px !important;
   }
-  .xl\:leading-\[25px\]{
+.xl\:leading-\[25px\]{
     line-height: 25px !important;
+  }
+.xl\:col-span-3{
+    grid-column: span 3 / span 3 !important;
+  }
+.xl\:col-span-4{
+    grid-column: span 4 / span 4 !important;
+  }
+.xl\:col-span-2{
+    grid-column: span 2 / span 2 !important;
+  }
+.xl\:col-span-6{
+    grid-column: span 6 / span 6 !important;
+  }
+.xl\:h-\[400px\]{
+    height: 400px !important;
+  }
+.xl\:py-\[0px\]{
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
   }
 }
