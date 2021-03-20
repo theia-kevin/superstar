@@ -831,6 +831,12 @@ select{
 .ml-\[15px\]{
   margin-left: 15px !important;
 }
+.mr-3{
+  margin-right: 0.75rem !important;
+}
+.-ml-1{
+  margin-left: -0.25rem !important;
+}
 .flex{
   display: flex !important;
 }
@@ -870,8 +876,8 @@ select{
 .h-\[30px\]{
   height: 30px !important;
 }
-.h-\[500px\]{
-  height: 500px !important;
+.h-\[700px\]{
+  height: 700px !important;
 }
 .h-auto{
   height: auto !important;
@@ -879,8 +885,8 @@ select{
 .h-\[40px\]{
   height: 40px !important;
 }
-.h-\[700px\]{
-  height: 700px !important;
+.h-5{
+  height: 1.25rem !important;
 }
 .w-full{
   width: 100% !important;
@@ -888,14 +894,11 @@ select{
 .w-10{
   width: 2.5rem !important;
 }
-.w-\[500px\]{
-  width: 500px !important;
-}
 .w-auto{
   width: auto !important;
 }
-.w-\[700px\]{
-  width: 700px !important;
+.w-5{
+  width: 1.25rem !important;
 }
 .max-w-xs{
   max-width: 20rem !important;
@@ -918,6 +921,20 @@ select{
 }
 .translate-x-0{
   --tw-translate-x: 0px !important;
+}
+@-webkit-keyframes spin{
+  to{
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin{
+  to{
+    transform: rotate(360deg);
+  }
+}
+.animate-spin{
+  -webkit-animation: spin 1s linear infinite !important;
+          animation: spin 1s linear infinite !important;
 }
 .cursor-pointer{
   cursor: pointer !important;
@@ -1212,6 +1229,9 @@ select{
 }
 .opacity-75{
   opacity: 0.75 !important;
+}
+.opacity-25{
+  opacity: 0.25 !important;
 }
 .shadow-none{
   --tw-shadow: 0 0 #0000 !important;
