@@ -2,10 +2,18 @@ const {colors: defaultColors} = require('tailwindcss/defaultTheme');
 
 module.exports = {
   corePlugins: {
-    preflight: false,
+    preflight: true,
   },
   purge: {
-    enabled: false,
+    enabled: true,
+    content: [
+      './resources/js/*.{js,vue}',
+      './resources/js/**/*.{js,vue}',
+      './resources/sass/*.scss',
+      './resources/sass/**/*.scss',
+      './*.php',
+      './**/*.php',
+    ]
   },
   important: true,
   darkMode: false,
@@ -78,9 +86,9 @@ module.exports = {
   },
   variants: {
     extend: {},
-    fontWeight: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
-    transform: ['hover', 'focus'],
-    overflow: ['hover', 'focus'],
+    fontWeight: ['hover'],
+    transform: ['hover'],
+    overflow: ['hover'],
   },
   plugins: [
     require('@tailwindcss/forms'),

@@ -18,8 +18,6 @@ function enqueueScripts()
 {
     $mix_manifest = (array)json_decode(file_get_contents(__DIR__ . '/mix-manifest.json'));
 
-    wp_enqueue_style('mixins-css', get_stylesheet_directory_uri() . '/public/css/mixins.css');
-//    wp_enqueue_style('mixins-css', get_stylesheet_directory_uri() . $mix_manifest['/public/css/mixins.css']);
     wp_enqueue_style('app-css', get_stylesheet_directory_uri() . $mix_manifest['/public/css/app.css']);
     wp_enqueue_script('app-js', get_stylesheet_directory_uri() . $mix_manifest['/public/js/app.js'], [], false, true);
 }

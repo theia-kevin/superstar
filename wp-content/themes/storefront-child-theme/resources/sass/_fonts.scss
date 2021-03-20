@@ -1,3 +1,4 @@
+@import 'variables';
 @import url("https://p.typekit.net/p.css?s=1&k=zmy4eiw&ht=tk&f=24539.24543.24547.24549.35914&a=71520483&app=typekit&e=css");
 
 @font-face {
@@ -42,23 +43,22 @@
 
 @variants hover {
   .font-sofia-pro-light {
-    font-family: 'sofia-pro-light', sans-serif;
+    font-family: $sofia-pro-light, sans-serif;
   }
 
   .font-sofia-pro {
-    font-family: 'sofia-pro', sans-serif;
+    font-family: $sofia-pro, sans-serif;
   }
 
   .font-sofia-pro-medium {
-    font-family: 'sofia-pro-medium', sans-serif;
+    font-family: $sofia-pro-medium, sans-serif;
   }
 
   .font-sofia-pro-bold {
-    font-family: 'sofia-pro-bold', sans-serif;
+    font-family: $sofia-pro-bold, sans-serif;
   }
 
   .font-jumble {
-    font-family: 'jumble', sans-serif;
+    font-family: $jumble, sans-serif;
   }
 }
-

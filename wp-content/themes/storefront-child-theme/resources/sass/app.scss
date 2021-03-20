@@ -1,10 +1,30 @@
 @import 'variables';
+@import 'functions';
 @import 'fonts';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 //@tailwind screens;
-@import 'functions';
+
+@import '~aos/dist/aos.css';
+@import '~animate.css/animate.min.css';
+
+body, button, input, select, textarea {
+  font-family: $sofia-pro-light !important;
+}
+
+a:focus, button:focus, .button.alt:focus, input:focus, textarea:focus, input[type="button"]:focus, input[type="reset"]:focus, input[type="submit"]:focus, input[type="email"]:focus, input[type="tel"]:focus, input[type="url"]:focus, input[type="password"]:focus, input[type="search"]:focus {
+  outline-color: transparent !important;
+}
+
+.storefront-handheld-footer-bar {
+  display: none !important;
+}
+
+.site, body {
+  overflow-x: unset !important;
+}
 
 html, body {
   @apply h-full m-0;
@@ -12,6 +32,15 @@ html, body {
 
 body {
   @apply debug-screens relative;
+}
+
+.home {
+  .col-full {
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
 }
 
 .btn-yellow {
@@ -23,12 +52,37 @@ body {
   color: $purple-01;
   background-color: $yellow-01;
   text-transform: uppercase;
-  padding: rem(3) rem(12);
-  border-radius: rem(10);
+  padding: rem(4) rem(14);
+  border-radius: rem(15);
   line-height: 31px;
   transition: all 0.5s;
+
   &:hover {
     transform: translate(rem(5), rem(-5));
-    @apply shadow-2xl;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.btn-blank {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $jumble;
+  font-size: rem(20);
+  color: white;
+  background-color: transparent;
+  text-transform: uppercase;
+  padding: rem(4) rem(24);
+  border: 2px solid white;
+  border-radius: rem(15);
+  line-height: 31px;
+  transition: all 0.5s;
+
+  &:hover {
+    transform: translate(rem(5), rem(-5));
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    color: $purple-01;
+    background-color: $yellow-01;
+    border-color:  $yellow-01;
   }
 }
