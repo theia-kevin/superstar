@@ -17,16 +17,16 @@ $menu_items = generateCustomMenu('primary');
     <?php do_action('storefront_before_header'); ?>
     <div class="relative z-50 hidden xl:block h-[300px] bg-no-repeat bg-cover bg-center" style="background-image: url('<?php echo get_field('header_background',
         'option')['url']; ?>');">
-        <div class="container mx-auto px-4 h-[300px] flex">
+        <div class="container mx-auto px-4 flex">
             <div class="grid grid-cols-11 w-full">
                 <div class="col-span-4 flex justify-between pt-[90px]">
                     <a class="self-start text-[18px] text-white uppercase whitespace-nowrap transition-all duration-300 hover:text-yellow-01 hover:font-jumble hover:text-[25px] hover:transform hover:-translate-y-2 hover:translate-x-2" href="<?php echo $menu_items[0]->url; ?>"><?php echo $menu_items[0]->title; ?></a>
                     <a class="self-start text-[18px] text-white uppercase whitespace-nowrap transition-all duration-300 hover:text-yellow-01 hover:font-jumble hover:text-[25px] hover:transform hover:-translate-y-2 hover:translate-x-2" href="<?php echo $menu_items[1]->url; ?>"><?php echo $menu_items[1]->title; ?></a>
                     <a class="self-start text-[18px] text-white uppercase whitespace-nowrap transition-all duration-300 hover:text-yellow-01 hover:font-jumble hover:text-[25px] hover:transform hover:-translate-y-2 hover:translate-x-2" href="<?php echo $menu_items[2]->url; ?>"><?php echo $menu_items[2]->title; ?></a>
                 </div>
-                <div class="col-span-3 pt-[30px]">
+                <div class="col-span-3 pt-[30px] animate__animated animate__zoomInDown">
                     <a href="<?php echo home_url('/'); ?>">
-                        <img class="mx-auto transition-all duration-300 hover:transform hover:scale-110" src="<?php echo getCustomLogo()[0]; ?>" alt="">
+                        <img class="mx-auto transition-all duration-300 hover:transform hover:scale-125" src="<?php echo getCustomLogo()[0]; ?>" alt="">
                     </a>
                 </div>
                 <div class="col-span-4 flex justify-between pt-[90px]">
@@ -39,10 +39,10 @@ $menu_items = generateCustomMenu('primary');
     </div>
     <div class="relative z-50 block xl:hidden h-[200px] bg-no-repeat bg-cover bg-left-bottom" style="background-image: url('<?php echo get_field('header_background',
         'option')['url']; ?>');" x-data="{ sidebarOpen: false }" @keydown.window.escape="sidebarOpen = false">
-        <div class="container mx-auto px-4 h-[100px] grid grid-cols-3">
+        <div class="container mx-auto px-4 grid grid-cols-3">
             <div></div>
             <a class="flex justify-center" href="<?php echo home_url('/'); ?>">
-                <img class="self-center h-[100px] my-[15px] object-contain transition-all duration-300 hover:transform hover:scale-110" src="<?php echo getCustomLogo()[0]; ?>" alt="">
+                <img class="h-[100px] self-center my-[15px] object-contain transition-all duration-300 hover:transform hover:scale-125" src="<?php echo getCustomLogo()[0]; ?>" alt="">
             </a>
             <div class="cursor-pointer flex items-center justify-end" @click.stop="sidebarOpen = true">
                 <svg class="h-10 w-10 text-white transition-all duration-300 hover:text-yellow-01 " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">

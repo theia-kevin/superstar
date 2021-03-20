@@ -33,7 +33,16 @@ module.exports = {
           },
           'purple-01': {
             DEFAULT: '#6969ff',
-          }
+          },
+          'green-01': {
+            DEFAULT: '#2f882c',
+          },
+          'green-02': {
+            DEFAULT: '#afcb58',
+          },
+          'green-03': {
+            DEFAULT: '#d5e2d3',
+          },
         },
         backgroundColor: {
           ...defaultColors,
@@ -49,7 +58,16 @@ module.exports = {
             },
             'purple-01': {
               DEFAULT: '#6969ff',
-            }
+            },
+            'green-01': {
+              DEFAULT: '#2f882c',
+            },
+            'green-02': {
+              DEFAULT: '#afcb58',
+            },
+            'green-03': {
+              DEFAULT: '#d5e2d3',
+            },
           },
         },
         borderColor: {
@@ -66,14 +84,53 @@ module.exports = {
             },
             'purple-01': {
               DEFAULT: '#6969ff',
-            }
+            },
+            'green-01': {
+              DEFAULT: '#2f882c',
+            },
+            'green-02': {
+              DEFAULT: '#afcb58',
+            },
+            'green-03': {
+              DEFAULT: '#d5e2d3',
+            },
           },
         },
+        placeholderColor: {
+          ...defaultColors,
+          ...{
+            'blue-01': {
+              DEFAULT: '#42CDE2',
+            },
+            'blue-02': {
+              DEFAULT: '#0094fc',
+            },
+            'yellow-01': {
+              DEFAULT: '#FBE477',
+            },
+            'purple-01': {
+              DEFAULT: '#6969ff',
+            },
+            'green-01': {
+              DEFAULT: '#2f882c',
+            },
+            'green-02': {
+              DEFAULT: '#afcb58',
+            },
+            'green-03': {
+              DEFAULT: '#d5e2d3',
+            },
+          },
+        }
       },
       fontFamily: {
         'sans': ['sofia-pro-light', 'sans-serif'],
         'serif': ['sofia-pro-light', 'sans-serif'],
-        'mono': ['sofia-pro-light', 'sans-serif']
+        'mono': ['sofia-pro-light', 'sans-serif'],
+        'sofia-pro-light': ['sofia-pro-light', 'sans-serif'],
+        'sofia-pro': ['sofia-pro', 'sans-serif'],
+        'sofia-pro-medium': ['sofia-pro-medium', 'sans-serif'],
+        'jumble': ['jumble', 'sans-serif'],
       },
     },
     screens: {

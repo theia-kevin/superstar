@@ -34,7 +34,7 @@ body {
   @apply debug-screens relative;
 }
 
-.home {
+.home, .contact {
   .col-full {
     max-width: none !important;
     margin: 0 !important;
@@ -85,4 +85,11 @@ body {
     background-color: $yellow-01;
     border-color:  $yellow-01;
   }
+}
+
+input {
+  &.contact {
+    @apply bg-green-03 shadow-none h-[40px];
+  }
+
 }

@@ -34,6 +34,7 @@ mix.sass('resources/sass/app.scss', 'public/css/app.css').options({
   ],
 });
 mix.sass('resources/sass/style.scss', 'style.css');
+mix.js('resources/js/map.js', 'public/js/map.js')
 
 if (mix.inProduction()) {
   mix.version();

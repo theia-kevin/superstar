@@ -20,9 +20,29 @@ function enqueueScripts()
 
     wp_enqueue_style('app-css', get_stylesheet_directory_uri() . $mix_manifest['/public/css/app.css']);
     wp_enqueue_script('app-js', get_stylesheet_directory_uri() . $mix_manifest['/public/js/app.js'], [], false, true);
+
+    $wp_obj = [
+        'enquiry_title'        => get_field('enquiry_title', 'option'),
+        'enquiry_subtitle'     => get_field('enquiry_subtitle', 'option'),
+        'enquiry_submit_label' => get_field('enquiry_submit_label', 'option'),
+        'cf7_url'              => get_site_url() . '/wp-json/contact-form-7/v1/contact-forms/' . get_field('contact_form_7_id',
+                'option') . '/feedback',
+        'wp_nonce'             => wp_create_nonce(date('YmdHis')),
+    ];
+
+    if (is_page('contact')) {
+        $wp_obj['google_map_api_key'] = get_field('google_map_api_key');
+        $wp_obj['google_map_latitude'] = get_field('google_map_latitude');
+        $wp_obj['google_map_longitude'] = get_field('google_map_longitude');
+
+        wp_enqueue_script('map-js', get_stylesheet_directory_uri() . $mix_manifest['/public/js/map.js'], [], false,
+            true);
+    }
+
+    wp_localize_script('app-js', 'wp_obj', $wp_obj);
 }
 
-add_action('wp_enqueue_scripts', 'enqueueScripts');
+add_action('wp_enqueue_scripts', 'enqueueScripts', 10000);
 
 function modifyAdminLoginImages()
 {
@@ -57,8 +77,11 @@ add_action('after_setup_theme', 'hideAdminBar');
 
 function insertCSSClassToBodyTag($classes)
 {
-
     $classes[] = '';
+
+    if (is_page('Contact')) {
+        $classes[] = 'contact';
+    }
 
     return $classes;
 }
