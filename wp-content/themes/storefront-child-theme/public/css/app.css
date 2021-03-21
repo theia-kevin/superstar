@@ -849,6 +849,9 @@ select{
 .inline-flex{
   display: inline-flex !important;
 }
+.inline-block{
+  display: inline-block !important;
+}
 .hidden{
   display: none !important;
 }

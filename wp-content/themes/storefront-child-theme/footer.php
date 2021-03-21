@@ -40,7 +40,7 @@ $menu_items = generateCustomMenu('primary');
                 <?php
                 foreach (get_field('footer_social_icons', 'options') as $footer_social_icon) {
                     ?>
-                    <a class="block ml-[15px]" href="<?php echo $footer_social_icon['footer_social_url_link']; ?>">
+                    <a class="inline-block ml-[15px]" href="<?php echo $footer_social_icon['footer_social_url_link']; ?>">
                         <img src="<?php echo $footer_social_icon['footer_social_icon_image']['url']; ?>" alt="">
                     </a>
                     <?php

@@ -11,13 +11,14 @@ get_header();
         </div>
     </div>
     <div class="pt-[400px] xl:pt-[600px]"></div>
-    <?php get_template_part('template-parts/content', 'contact'); ?>
-    <div class="container mx-auto px-4 bg-gray-300">
-        <div><?php the_field('who_title'); ?></div>
-        <div><?php the_field('who_subtitle'); ?></div>
-        <div><?php the_field('who_content'); ?></div>
-        <a href="<?php the_field('who_link_url_01'); ?>"><?php the_field('who_link_label_01'); ?></a>
-        <a href="<?php the_field('who_link_url_02'); ?>"><?php the_field('who_link_label_02'); ?></a>
+<?php get_template_part('template-parts/content', 'contact'); ?>
+<?php get_template_part('template-parts/content', 'news'); ?>
+    <div class="container mx-auto px-4">
+        <p><?php the_field('who_title'); ?></p>
+        <p><?php the_field('who_subtitle'); ?></p>
+        <p><?php the_field('who_content'); ?></p>
+        <a class="inline-block" href="<?php the_field('who_link_url_1'); ?>"><?php the_field('who_link_label_1'); ?></a>
+        <a class="inline-block" href="<?php the_field('who_link_url_2'); ?>"><?php the_field('who_link_label_2'); ?></a>
         <img src="<?php the_field('who_product_arrow_image'); ?>" alt="">
         <?php
         foreach (get_field('who_products', get_the_ID()) as $who_product) {
@@ -45,13 +46,12 @@ get_header();
                 </div>
             </div>
             <div>
-                <div class="cursor-pointer" x-on:click="tab = '1'">Sentence One</div>
-                <div class="cursor-pointer" x-on:click="tab = '2'">Sentence Two</div>
-                <div class="cursor-pointer" x-on:click="tab = '3'">Sentence Three</div>
-                <div class="cursor-pointer" x-on:click="tab = '4'">Sentence Four</div>
+                <div class="cursor-pointer" x-on:click="tab = '1'">Content One</div>
+                <div class="cursor-pointer" x-on:click="tab = '2'">Content Two</div>
+                <div class="cursor-pointer" x-on:click="tab = '3'">Content Three</div>
+                <div class="cursor-pointer" x-on:click="tab = '4'">Content Four</div>
             </div>
         </div>
     </div>
-    <div id="app"></div>
 <?php
 get_footer();
