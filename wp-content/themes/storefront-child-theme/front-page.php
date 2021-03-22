@@ -11,47 +11,58 @@ get_header();
         </div>
     </div>
     <div class="pt-[400px] xl:pt-[600px]"></div>
-<?php get_template_part('template-parts/content', 'contact'); ?>
-<?php get_template_part('template-parts/content', 'news'); ?>
-    <div class="container mx-auto px-4">
+    <div class="container mx-auto mb-[200px] px-4">
         <p><?php the_field('who_title'); ?></p>
         <p><?php the_field('who_subtitle'); ?></p>
         <p><?php the_field('who_content'); ?></p>
-        <a class="inline-block" href="<?php the_field('who_link_url_1'); ?>"><?php the_field('who_link_label_1'); ?></a>
-        <a class="inline-block" href="<?php the_field('who_link_url_2'); ?>"><?php the_field('who_link_label_2'); ?></a>
-        <img src="<?php the_field('who_product_arrow_image'); ?>" alt="">
+        <p><?php the_field('who_link_label_1'); ?></p>
+        <p><?php the_field('who_link_url_1'); ?></p>
+        <p><?php the_field('who_link_label_2'); ?></p>
+        <p><?php the_field('who_link_url_2'); ?></p>
+        <p><?php echo get_field('who_product_arrow_image')['url']; ?></p>
         <?php
         foreach (get_field('who_products', get_the_ID()) as $who_product) {
             ?>
-            <div><?php echo $who_product['who_product_title']; ?></div>
-            <img src="<?php echo $who_product['who_product_image']['url']; ?>" alt="">
+            <p><?php echo $who_product['who_product_title']; ?></p>
+            <p><?php echo $who_product['who_product_image']['url']; ?></p>
             <?php
         }
         ?>
     </div>
-    <div class="container mx-auto py-4">
-        <div class="flex" x-data="{ tab: '1' }">
-            <div>
-                <div x-show="tab === '1'">
-                    Image One
-                </div>
-                <div x-show="tab === '2'">
-                    Image Two
-                </div>
-                <div x-show="tab === '3'">
-                    Image Three
-                </div>
-                <div x-show="tab === '4'">
-                    Image Four
-                </div>
-            </div>
-            <div>
-                <div class="cursor-pointer" x-on:click="tab = '1'">Content One</div>
-                <div class="cursor-pointer" x-on:click="tab = '2'">Content Two</div>
-                <div class="cursor-pointer" x-on:click="tab = '3'">Content Three</div>
-                <div class="cursor-pointer" x-on:click="tab = '4'">Content Four</div>
-            </div>
-        </div>
+    <div class="container mx-auto mb-[200px] px-4">
+        <p><?php the_field('what_title'); ?></p>
+        <p><?php the_field('what_subtitle'); ?></p>
+        <p><?php the_field('what_content'); ?></p>
+        <p><?php echo get_field('what_image')['url']; ?></p>
+        <?php
+        foreach (get_field('what_products', get_the_ID()) as $what_products) {
+            ?>
+            <p><?php echo $what_products['what_product_title']; ?></p>
+            <p><?php echo $what_products['what_product_content']; ?></p>
+            <p><?php echo $what_products['what_product_image']['url']; ?></p>
+            <?php
+        }
+        ?>
     </div>
+<?php get_template_part('template-parts/content', 'news'); ?>
+    <div class="container mx-auto mb-[200px] px-4">
+        <p><?php the_field('take_title'); ?></p>
+        <p><?php the_field('take_subtitle'); ?></p>
+        <p><?php the_field('take_content'); ?></p>
+        <p><?php echo get_field('take_image_1')['url']; ?></p>
+        <p><?php echo get_field('take_image_2')['url']; ?></p>
+        <p><?php echo get_field('take_image_3')['url']; ?></p>
+        <p><?php echo get_field('take_image_4')['url']; ?></p>
+    </div>
+    <div class="container mx-auto mb-[200px] px-4">
+        <p><?php the_field('come_title'); ?></p>
+        <p><?php the_field('come_subtitle'); ?></p>
+        <p><?php the_field('come_link_label_1'); ?></p>
+        <p><?php the_field('come_link_url_1'); ?></p>
+        <p><?php the_field('come_link_label_2'); ?></p>
+        <p><?php the_field('come_link_url_2'); ?></p>
+        <p><?php echo get_field('come_image')['url']; ?></p>
+    </div>
+<?php get_template_part('template-parts/content', 'contact'); ?>
 <?php
 get_footer();

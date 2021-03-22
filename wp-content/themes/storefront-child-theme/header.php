@@ -12,6 +12,8 @@
 wp_body_open();
 do_action('storefront_before_site');
 $menu_items = generateCustomMenu('primary');
+global $wp;
+$current_url = home_url( add_query_arg( array(), $wp->request ) );
 ?>
 <div id="page" class="hfeed site">
     <?php do_action('storefront_before_header'); ?>
@@ -20,9 +22,9 @@ $menu_items = generateCustomMenu('primary');
         <div class="container mx-auto px-4 flex">
             <div class="grid grid-cols-11 w-full">
                 <div class="col-span-4 flex justify-between pt-[90px]">
-                    <a class="self-start text-[18px] text-white uppercase whitespace-nowrap transition-all duration-300 hover:text-yellow-01 hover:font-jumble hover:text-[25px] hover:transform hover:-translate-y-2 hover:translate-x-2" href="<?php echo $menu_items[0]->url; ?>"><?php echo $menu_items[0]->title; ?></a>
-                    <a class="self-start text-[18px] text-white uppercase whitespace-nowrap transition-all duration-300 hover:text-yellow-01 hover:font-jumble hover:text-[25px] hover:transform hover:-translate-y-2 hover:translate-x-2" href="<?php echo $menu_items[1]->url; ?>"><?php echo $menu_items[1]->title; ?></a>
-                    <a class="self-start text-[18px] text-white uppercase whitespace-nowrap transition-all duration-300 hover:text-yellow-01 hover:font-jumble hover:text-[25px] hover:transform hover:-translate-y-2 hover:translate-x-2" href="<?php echo $menu_items[2]->url; ?>"><?php echo $menu_items[2]->title; ?></a>
+                    <a class="self-start font-sofia-pro-light text-[18px] text-white uppercase whitespace-nowrap transition-all duration-300 hover:font-jumble hover:text-[25px] hover:text-yellow-01 hover:transform hover:-translate-y-2 hover:translate-x-2 <?php echo $menu_items[0]->url ==  $current_url . '/' ? 'font-sofia-pro text-yellow-01' : ''; ?>" href="<?php echo $menu_items[0]->url; ?>"><?php echo $menu_items[0]->title; ?></a>
+                    <a class="self-start font-sofia-pro-light text-[18px] text-white uppercase whitespace-nowrap transition-all duration-300 hover:font-jumble hover:text-[25px] hover:text-yellow-01 hover:transform hover:-translate-y-2 hover:translate-x-2 <?php echo $menu_items[1]->url ==  $current_url . '/' ? 'font-sofia-pro text-yellow-01' : ''; ?>" href="<?php echo $menu_items[1]->url; ?>"><?php echo $menu_items[1]->title; ?></a>
+                    <a class="self-start font-sofia-pro-light text-[18px] text-white uppercase whitespace-nowrap transition-all duration-300 hover:font-jumble hover:text-[25px] hover:text-yellow-01 hover:transform hover:-translate-y-2 hover:translate-x-2 <?php echo $menu_items[2]->url ==  $current_url . '/' ? 'font-sofia-pro text-yellow-01' : ''; ?>" href="<?php echo $menu_items[2]->url; ?>"><?php echo $menu_items[2]->title; ?></a>
                 </div>
                 <div class="col-span-3 pt-[30px] animate__animated animate__zoomInDown">
                     <a href="<?php echo home_url('/'); ?>">
@@ -30,8 +32,8 @@ $menu_items = generateCustomMenu('primary');
                     </a>
                 </div>
                 <div class="col-span-4 flex justify-between pt-[90px]">
-                    <a class="self-start text-[18px] text-white uppercase whitespace-nowrap transition-all duration-300 hover:text-yellow-01 hover:font-jumble hover:text-[25px] hover:transform hover:-translate-y-2 hover:translate-x-2" href="<?php echo $menu_items[3]->url; ?>"><?php echo $menu_items[3]->title; ?></a>
-                    <a class="self-start text-[18px] text-white uppercase whitespace-nowrap transition-all duration-300 hover:text-yellow-01 hover:font-jumble hover:text-[25px] hover:transform hover:-translate-y-2 hover:translate-x-2" href="<?php echo $menu_items[4]->url; ?>"><?php echo $menu_items[4]->title; ?></a>
+                    <a class="self-start font-sofia-pro-light text-[18px] text-white uppercase whitespace-nowrap transition-all duration-300 hover:font-jumble hover:text-[25px] hover:text-yellow-01 hover:transform hover:-translate-y-2 hover:translate-x-2 <?php echo $menu_items[3]->url ==  $current_url . '/' ? 'font-sofia-pro text-yellow-01' : ''; ?>" href="<?php echo $menu_items[3]->url; ?>"><?php echo $menu_items[3]->title; ?></a>
+                    <a class="self-start font-sofia-pro-light text-[18px] text-white uppercase whitespace-nowrap transition-all duration-300 hover:font-jumble hover:text-[25px] hover:text-yellow-01 hover:transform hover:-translate-y-2 hover:translate-x-2 <?php echo $menu_items[4]->url ==  $current_url . '/' ? 'font-sofia-pro text-yellow-01' : ''; ?>" href="<?php echo $menu_items[4]->url; ?>"><?php echo $menu_items[4]->title; ?></a>
                     <a class="flex items-center justify-center font-jumble text-[20px] text-purple-01 bg-yellow-01 uppercase leading-[31px] py-[4px] px-[14px] rounded-[15px] transition-all duration-300 hover:transform hover:-translate-y-2 hover:translate-x-2 hover:shadow-xl self-start" href="<?php echo $menu_items[5]->url; ?>"><?php echo $menu_items[5]->title; ?></a>
                 </div>
             </div>
@@ -63,17 +65,17 @@ $menu_items = generateCustomMenu('primary');
                             </svg>
                         </div>
                     </div>
-                    <a class="self-start text-[18px] text-white uppercase whitespace-nowrap my-[10px] mx-[30px] transition-all duration-300 h-[30px] hover:overflow-y-hidden hover:text-yellow-01 hover:font-jumble hover:text-[25px]" href="<?php echo $menu_items[0]->url; ?>"><?php echo $menu_items[0]->title; ?></a>
-                    <a class="self-start text-[18px] text-white uppercase whitespace-nowrap my-[10px] mx-[30px] transition-all duration-300 h-[30px] hover:overflow-y-hidden hover:text-yellow-01 hover:font-jumble hover:text-[25px]" href="<?php echo $menu_items[1]->url; ?>"><?php echo $menu_items[1]->title; ?></a>
-                    <a class="self-start text-[18px] text-white uppercase whitespace-nowrap my-[10px] mx-[30px] transition-all duration-300 h-[30px] hover:overflow-y-hidden hover:text-yellow-01 hover:font-jumble hover:text-[25px]" href="<?php echo $menu_items[2]->url; ?>"><?php echo $menu_items[2]->title; ?></a>
-                    <a class="self-start text-[18px] text-white uppercase whitespace-nowrap my-[10px] mx-[30px] transition-all duration-300 h-[30px] hover:overflow-y-hidden hover:text-yellow-01 hover:font-jumble hover:text-[25px]" href="<?php echo $menu_items[3]->url; ?>"><?php echo $menu_items[3]->title; ?></a>
-                    <a class="self-start text-[18px] text-white uppercase whitespace-nowrap my-[10px] mx-[30px] transition-all duration-300 h-[30px] hover:overflow-y-hidden hover:text-yellow-01 hover:font-jumble hover:text-[25px]" href="<?php echo $menu_items[4]->url; ?>"><?php echo $menu_items[4]->title; ?></a>
-                    <a class="self-start text-[18px] text-white uppercase whitespace-nowrap my-[10px] mx-[30px] transition-all duration-300 h-[30px] hover:overflow-y-hidden hover:text-yellow-01 hover:font-jumble hover:text-[25px]" href="<?php echo $menu_items[5]->url; ?>"><?php echo $menu_items[5]->title; ?></a>
+                    <a class="self-start font-sofia-pro-light text-[18px] text-white uppercase whitespace-nowrap my-[10px] mx-[30px] transition-all duration-300 hover:font-jumble hover:text-[25px] hover:text-yellow-01 h-[30px] hover:overflow-y-hidden  <?php echo $menu_items[0]->url ==  $current_url . '/' ? 'font-sofia-pro text-yellow-01' : ''; ?>" href="<?php echo $menu_items[0]->url; ?>"><?php echo $menu_items[0]->title; ?></a>
+                    <a class="self-start font-sofia-pro-light text-[18px] text-white uppercase whitespace-nowrap my-[10px] mx-[30px] transition-all duration-300 hover:font-jumble hover:text-[25px] hover:text-yellow-01 h-[30px] hover:overflow-y-hidden  <?php echo $menu_items[1]->url ==  $current_url . '/' ? 'font-sofia-pro text-yellow-01' : ''; ?>" href="<?php echo $menu_items[1]->url; ?>"><?php echo $menu_items[1]->title; ?></a>
+                    <a class="self-start font-sofia-pro-light text-[18px] text-white uppercase whitespace-nowrap my-[10px] mx-[30px] transition-all duration-300 hover:font-jumble hover:text-[25px] hover:text-yellow-01 h-[30px] hover:overflow-y-hidden  <?php echo $menu_items[2]->url ==  $current_url . '/' ? 'font-sofia-pro text-yellow-01' : ''; ?>" href="<?php echo $menu_items[2]->url; ?>"><?php echo $menu_items[2]->title; ?></a>
+                    <a class="self-start font-sofia-pro-light text-[18px] text-white uppercase whitespace-nowrap my-[10px] mx-[30px] transition-all duration-300 hover:font-jumble hover:text-[25px] hover:text-yellow-01 h-[30px] hover:overflow-y-hidden  <?php echo $menu_items[3]->url ==  $current_url . '/' ? 'font-sofia-pro text-yellow-01' : ''; ?>" href="<?php echo $menu_items[3]->url; ?>"><?php echo $menu_items[3]->title; ?></a>
+                    <a class="self-start font-sofia-pro-light text-[18px] text-white uppercase whitespace-nowrap my-[10px] mx-[30px] transition-all duration-300 hover:font-jumble hover:text-[25px] hover:text-yellow-01 h-[30px] hover:overflow-y-hidden  <?php echo $menu_items[4]->url ==  $current_url . '/' ? 'font-sofia-pro text-yellow-01' : ''; ?>" href="<?php echo $menu_items[4]->url; ?>"><?php echo $menu_items[4]->title; ?></a>
+                    <a class="self-start font-sofia-pro-light text-[18px] text-white uppercase whitespace-nowrap my-[10px] mx-[30px] transition-all duration-300 hover:font-jumble hover:text-[25px] hover:text-yellow-01 h-[30px] hover:overflow-y-hidden  <?php echo $menu_items[5]->url ==  $current_url . '/' ? 'font-sofia-pro text-yellow-01' : ''; ?>" href="<?php echo $menu_items[5]->url; ?>"><?php echo $menu_items[5]->title; ?></a>
                 </div>
             </div>
         </div>
     </div>
     <?php do_action('storefront_before_content'); ?>
     <div id="content" class="site-content" tabindex="-1">
-        <div class="col-full">
+        <div class="col-full <?php echo $pagename; ?>">
 <?php do_action('storefront_content_top');

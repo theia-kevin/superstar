@@ -6,7 +6,18 @@ get_header();
         </div>
     </div>
     <div class="pt-[100px] xl:pt-[200px]"></div>
-    <div class="h-[700px] w-full" id="map"></div>
+    <div class="container mx-auto mb-[200px] px-4">
+        <?php the_field('contact_us_title'); ?>
+        <?php the_field('contact_us_subtitle'); ?>
+        <?php the_field('contact_us_link_label'); ?>
+        <?php the_field('contact_us_link_url'); ?>
+        <?php the_field('contact_us_content_title_1'); ?>
+        <?php the_field('contact_us_content_1'); ?>
+        <?php the_field('contact_us_content_title_2'); ?>
+        <?php the_field('contact_us_content_2'); ?>
+        <?php echo get_field('contact_us_image')['url']; ?>
+    </div>
+    <div class="h-[700px] w-full mb-[200px]" id="map"></div>
 <?php get_template_part('template-parts/content', 'contact'); ?>
 <?php
 get_footer();

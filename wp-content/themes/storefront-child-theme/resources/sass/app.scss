@@ -34,8 +34,17 @@ body {
   @apply debug-screens relative;
 }
 
-.home, .contact {
+.home {
   .col-full {
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box !important;
+  }
+}
+
+.col-full {
+  &.about-us, &.playground, &.education, &.membership, &.contact {
     max-width: none !important;
     margin: 0 !important;
     padding: 0 !important;
@@ -85,11 +94,4 @@ body {
     background-color: $yellow-01;
     border-color:  $yellow-01;
   }
-}
-
-input {
-  &.contact {
-    @apply bg-green-03 shadow-none h-[40px];
-  }
-
 }
