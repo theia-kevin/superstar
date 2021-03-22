@@ -53,45 +53,96 @@ body {
 }
 
 .btn-yellow {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: $jumble;
-  font-size: rem(20);
-  color: $purple-01;
-  background-color: $yellow-01;
-  text-transform: uppercase;
-  padding: rem(4) rem(14);
-  border-radius: rem(15);
-  line-height: 31px;
-  transition: all 0.5s;
-
-  &:hover {
-    transform: translate(rem(5), rem(-5));
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-  }
+  @apply
+  inline-block
+  font-jumble
+  text-[20px]
+  text-purple-01
+  uppercase
+  bg-yellow-01
+  rounded-[15px]
+  py-[4px]
+  px-[14px]
+  transition-all
+  duration-300
+  hover:transform
+  hover:-translate-y-1
+  hover:translate-x-1
+  hover:shadow-xl
+  cursor-pointer
 }
 
-.btn-blank {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: $jumble;
-  font-size: rem(20);
-  color: white;
-  background-color: transparent;
-  text-transform: uppercase;
-  padding: rem(4) rem(24);
-  border: 2px solid white;
-  border-radius: rem(15);
-  line-height: 31px;
-  transition: all 0.5s;
+.btn-blank-large-white {
+  @apply
+  inline-block
+  font-jumble
+  text-[20px]
+  text-white
+  uppercase
+  bg-transparent
+  border-2
+  border-white
+  rounded-[15px]
+  py-[4px]
+  px-[24px]
+  transition-all
+  duration-300
+  hover:text-purple-01
+  hover:bg-yellow-01
+  hover:border-yellow-01
+  hover:transform
+  hover:-translate-y-1
+  hover:translate-x-1
+  hover:shadow-xl
+  cursor-pointer
+}
 
-  &:hover {
-    transform: translate(rem(5), rem(-5));
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-    color: $purple-01;
-    background-color: $yellow-01;
-    border-color:  $yellow-01;
-  }
+.btn-blank-small-white {
+  @apply
+  inline-block
+  font-jumble
+  text-[14px]
+  text-white
+  uppercase
+  bg-transparent
+  border-2
+  border-white
+  rounded-[15px]
+  py-[4px]
+  px-[32px]
+  transition-all
+  duration-300
+  hover:text-purple-01
+  hover:bg-yellow-01
+  hover:border-yellow-01
+  hover:transform
+  hover:-translate-y-1
+  hover:translate-x-1
+  hover:shadow-xl
+  cursor-pointer
+}
+
+.btn-blank-small-green {
+  @apply
+  inline-block
+  font-jumble
+  text-[12px]
+  text-green-01
+  uppercase
+  bg-transparent
+  border-2
+  border-green-01
+  rounded-[15px]
+  py-[4px]
+  px-[8px]
+  transition-all
+  duration-300
+  hover:text-purple-01
+  hover:bg-yellow-01
+  hover:border-yellow-01
+  hover:transform
+  hover:-translate-y-1
+  hover:translate-x-1
+  hover:shadow-xl
+  cursor-pointer
 }

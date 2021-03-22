@@ -13,7 +13,7 @@ get_header();
             </div>
             <div class="col-span-12 xl:col-span-7 flex items-end flex-wrap">
                 <div class="font-sofia-pro-medium text-[22px] xl:text-[36px] text-orange-01 mr-[60px]"><?php the_field('contact_us_subtitle'); ?></div>
-                <a class="inline-block font-jumble text-[20px] text-purple-01 uppercase leading-[31px] bg-yellow-01 rounded-[15px] py-[4px] px-[14px] transition-all duration-300 hover:transform hover:-translate-y-0.5 hover:translate-x-0.5 hover:shadow-xl" href="<?php the_field('contact_us_link_url'); ?>"><?php the_field('contact_us_link_label'); ?></a>
+                <a class="btn-yellow" href="<?php the_field('contact_us_link_url'); ?>"><?php the_field('contact_us_link_label'); ?></a>
             </div>
         </div>
     </div>

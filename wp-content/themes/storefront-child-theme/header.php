@@ -34,7 +34,7 @@ $current_url = home_url( add_query_arg( array(), $wp->request ) );
                 <div class="col-span-4 flex justify-between pt-[90px]">
                     <a class="self-start font-sofia-pro-light text-[18px] text-white uppercase whitespace-nowrap transition-all duration-300 hover:font-jumble hover:text-[22px] hover:text-yellow-01 hover:transform hover:-translate-y-1 hover:translate-x-1 <?php echo $menu_items[3]->url ==  $current_url . '/' ? 'font-sofia-pro text-yellow-01' : ''; ?>" href="<?php echo $menu_items[3]->url; ?>"><?php echo $menu_items[3]->title; ?></a>
                     <a class="self-start font-sofia-pro-light text-[18px] text-white uppercase whitespace-nowrap transition-all duration-300 hover:font-jumble hover:text-[22px] hover:text-yellow-01 hover:transform hover:-translate-y-1 hover:translate-x-1 <?php echo $menu_items[4]->url ==  $current_url . '/' ? 'font-sofia-pro text-yellow-01' : ''; ?>" href="<?php echo $menu_items[4]->url; ?>"><?php echo $menu_items[4]->title; ?></a>
-                    <a class="flex items-center justify-center font-jumble text-[20px] text-purple-01 bg-yellow-01 uppercase leading-[31px] py-[4px] px-[14px] rounded-[15px] transition-all duration-300 hover:transform hover:-translate-y-1 hover:translate-x-1 hover:shadow-xl self-start" href="<?php echo $menu_items[5]->url; ?>"><?php echo $menu_items[5]->title; ?></a>
+                    <a class="btn-yellow self-start" href="<?php echo $menu_items[5]->url; ?>"><?php echo $menu_items[5]->title; ?></a>
                 </div>
             </div>
         </div>

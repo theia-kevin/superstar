@@ -6,7 +6,7 @@ get_header();
             <div class="col-span-12 xl:col-span-5 flex flex-col items-start justify-center">
                 <div class="font-jumble text-[54px] xl:text-[72px] text-white uppercase leading-[60px] xl:leading-[80px] animate__animated animate__bounce animate__delay-1s animate__repeat-3"><?php the_field('banner_title'); ?></div>
                 <div class="font-sofia-pro-light text-[14px] xl:text-[18px] text-white leading-[19px] xl:leading-[25px] py-[30px]"><?php the_field('banner_content'); ?></div>
-                <a class="flex items-center justify-center font-jumble text-[20px] text-white bg-transparent uppercase leading-[31px] py-[4px] px-[24px] border-2 border-white rounded-[15px] transition-all duration-300 hover:bg-yellow-01 hover:border-yellow-01 hover:text-purple-01 hover:transform hover:-translate-y-2 hover:translate-x-2 hover:shadow-xl" href="<?php the_field('banner_link_url'); ?>"><?php the_field('banner_link_label'); ?></a>
+                <a class="btn-blank-large-white" href="<?php the_field('banner_link_url'); ?>"><?php the_field('banner_link_label'); ?></a>
             </div>
         </div>
     </div>
