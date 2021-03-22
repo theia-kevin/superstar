@@ -1,50 +1,52 @@
 <template>
-  <div class="w-auto xl:w-[1100px] h-auto xl:h-[500px] mb-[200px] mx-[15px] xl:mx-auto bg-green-02 rounded-3xl py-[75px] px-[75px]">
-    <div class="text-center pb-[30px]">
-      <div class="font-jumble text-[45px] text-green-01 uppercase">{{ enquiry_title }}</div>
-      <div class="font-sofia-pro-light text-[14px] text-green-01">{{ enquiry_subtitle }}</div>
+  <div class="container mx-auto mb-[200px] px-4">
+    <div class="w-auto xl:w-[1100px] h-auto xl:h-[500px] mx-auto bg-green-02 rounded-3xl py-[75px] px-[75px]">
+      <div class="text-center pb-[30px]">
+        <div class="font-jumble text-[45px] text-green-01 uppercase">{{ enquiry_title }}</div>
+        <div class="font-sofia-pro-light text-[14px] text-green-01">{{ enquiry_subtitle }}</div>
+      </div>
+      <ValidationObserver ref="form">
+        <form @submit.prevent="onSubmit">
+          <div class="grid grid-row-2 gap-y-[30px]">
+            <div class="row-span-1">
+              <div class="grid grid-cols-2 gap-x-[30px] gap-y-[30px] xl:gap-y-[0px]">
+                <div class="col-span-2 xl:col-span-1 grid grid-rows-3 gap-y-[30px]">
+                  <div class="row-span-1">
+                    <ValidationProvider rules="your_name_required" v-slot="{ errors }">
+                      <input class="h-[40px] w-full shadow-none bg-green-03 placeholder-green-01 font-sofia-pro-light text-[14px]" v-model="your_name" type="text" :placeholder="errors.length ? errors[0] : 'Name*'">
+                    </ValidationProvider>
+                  </div>
+                  <div class="row-span-1">
+                    <ValidationProvider rules="your_email_required|your_email_valid" v-slot="{ errors }">
+                      <input class="h-[40px] w-full shadow-none bg-green-03 placeholder-green-01 font-sofia-pro-light text-[14px]" v-model="your_email" type="email" :placeholder="errors.length ? errors[0] : 'Email*'">
+                    </ValidationProvider>
+                  </div>
+                  <div class="row-span-1">
+                    <ValidationProvider rules="your_phone_required" v-slot="{ errors }">
+                      <input class="h-[40px] w-full shadow-none bg-green-03 placeholder-green-01 font-sofia-pro-light text-[14px]" v-model="your_phone" type="text" :placeholder="errors.length ? errors[0] : 'Phone*'">
+                    </ValidationProvider>
+                  </div>
+                </div>
+                <div class="col-span-2 xl:col-span-1 flex items-center">
+                  <ValidationProvider class="h-full w-full" rules="your_message_required" v-slot="{ errors }">
+                    <textarea class="h-full w-full shadow-none bg-green-03 placeholder-green-01 font-sofia-pro-light text-[14px]" v-model="your_message" :rows="5" :placeholder="errors.length ? errors[0] : 'Message*'"></textarea>
+                  </ValidationProvider>
+                </div>
+              </div>
+            </div>
+            <div class="row-span-1 flex items-center justify-end">
+              <svg v-if="loading" class="animate-spin -ml-1 mr-3 h-5 w-5 text-green-01" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+              </svg>
+              <div class="flex items-center justify-center font-jumble text-[12px] text-green-01 bg-transparent uppercase py-[4px] px-[8px] border-2 border-green-01 rounded-[15px] transition-all duration-300 hover:bg-yellow-01 hover:border-yellow-01 hover:text-purple-01 hover:transform hover:-translate-y-2 hover:translate-x-2 hover:shadow-xl cursor-pointer" @click="onSubmit">
+                {{ enquiry_submit_label }}
+              </div>
+            </div>
+          </div>
+        </form>
+      </ValidationObserver>
     </div>
-    <ValidationObserver ref="form">
-      <form @submit.prevent="onSubmit">
-        <div class="grid grid-row-2 gap-y-[30px]">
-          <div class="row-span-1">
-            <div class="grid grid-cols-2 gap-x-[30px] gap-y-[30px] xl:gap-y-[0px]">
-              <div class="col-span-2 xl:col-span-1 grid grid-rows-3 gap-y-[30px]">
-                <div class="row-span-1">
-                  <ValidationProvider rules="your_name_required" v-slot="{ errors }">
-                    <input class="h-[40px] w-full shadow-none bg-green-03 placeholder-green-01 font-sofia-pro-light text-[14px]" v-model="your_name" type="text" :placeholder="errors.length ? errors[0] : 'Name*'">
-                  </ValidationProvider>
-                </div>
-                <div class="row-span-1">
-                  <ValidationProvider rules="your_email_required|your_email_valid" v-slot="{ errors }">
-                    <input class="h-[40px] w-full shadow-none bg-green-03 placeholder-green-01 font-sofia-pro-light text-[14px]" v-model="your_email" type="email" :placeholder="errors.length ? errors[0] : 'Email*'">
-                  </ValidationProvider>
-                </div>
-                <div class="row-span-1">
-                  <ValidationProvider rules="your_phone_required" v-slot="{ errors }">
-                    <input class="h-[40px] w-full shadow-none bg-green-03 placeholder-green-01 font-sofia-pro-light text-[14px]" v-model="your_phone" type="text" :placeholder="errors.length ? errors[0] : 'Phone*'">
-                  </ValidationProvider>
-                </div>
-              </div>
-              <div class="col-span-2 xl:col-span-1 flex items-center">
-                <ValidationProvider class="h-full w-full" rules="your_message_required" v-slot="{ errors }">
-                  <textarea class="h-full w-full shadow-none bg-green-03 placeholder-green-01 font-sofia-pro-light text-[14px]" v-model="your_message" :rows="5" :placeholder="errors.length ? errors[0] : 'Message*'"></textarea>
-                </ValidationProvider>
-              </div>
-            </div>
-          </div>
-          <div class="row-span-1 flex items-center justify-end">
-            <svg v-if="loading" class="animate-spin -ml-1 mr-3 h-5 w-5 text-green-01" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-              <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-              <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-            </svg>
-            <div class="flex items-center justify-center font-jumble text-[12px] text-green-01 bg-transparent uppercase py-[4px] px-[8px] border-2 border-green-01 rounded-[15px] transition-all duration-300 hover:bg-yellow-01 hover:border-yellow-01 hover:text-purple-01 hover:transform hover:-translate-y-2 hover:translate-x-2 hover:shadow-xl cursor-pointer" @click="onSubmit">
-              {{ enquiry_submit_label }}
-            </div>
-          </div>
-        </div>
-      </form>
-    </ValidationObserver>
   </div>
 </template>
 <script>

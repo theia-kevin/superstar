@@ -777,6 +777,36 @@ select{
 .right-0{
   right: 0px !important;
 }
+.top-\[-30px\]{
+  top: -30px !important;
+}
+.bottom-0{
+  bottom: 0px !important;
+}
+.top-\[300px\]{
+  top: 300px !important;
+}
+.left-\[30px\]{
+  left: 30px !important;
+}
+.top-\[30px\]{
+  top: 30px !important;
+}
+.top-\[50px\]{
+  top: 50px !important;
+}
+.top-\[80px\]{
+  top: 80px !important;
+}
+.top-\[100px\]{
+  top: 100px !important;
+}
+.left-\[60px\]{
+  left: 60px !important;
+}
+.left-\[100px\]{
+  left: 100px !important;
+}
 .z-0{
   z-index: 0 !important;
 }
@@ -785,6 +815,9 @@ select{
 }
 .z-40{
   z-index: 40 !important;
+}
+.z-10{
+  z-index: 10 !important;
 }
 .col-span-12{
   grid-column: span 12 / span 12 !important;
@@ -830,11 +863,26 @@ select{
 .mb-\[200px\]{
   margin-bottom: 200px !important;
 }
+.mb-\[100px\]{
+  margin-bottom: 100px !important;
+}
+.mr-\[60px\]{
+  margin-right: 60px !important;
+}
 .-ml-1{
   margin-left: -0.25rem !important;
 }
 .mr-3{
   margin-right: 0.75rem !important;
+}
+.mb-\[15px\]{
+  margin-bottom: 15px !important;
+}
+.mb-\[60px\]{
+  margin-bottom: 60px !important;
+}
+.mb-\[90px\]{
+  margin-bottom: 90px !important;
 }
 .flex{
   display: flex !important;
@@ -877,6 +925,9 @@ select{
 }
 .h-\[30px\]{
   height: 30px !important;
+}
+.h-\[150px\]{
+  height: 150px !important;
 }
 .h-\[700px\]{
   height: 700px !important;
@@ -958,6 +1009,9 @@ select{
 }
 .flex-col{
   flex-direction: column !important;
+}
+.flex-wrap{
+  flex-wrap: wrap !important;
 }
 .items-end{
   align-items: flex-end !important;
@@ -1154,6 +1208,9 @@ select{
 .font-sofia-pro{
   font-family: sofia-pro, sans-serif !important;
 }
+.font-sofia-pro-medium{
+  font-family: sofia-pro-medium, sans-serif !important;
+}
 .text-\[16px\]{
   font-size: 16px !important;
 }
@@ -1168,6 +1225,12 @@ select{
 }
 .text-\[18px\]{
   font-size: 18px !important;
+}
+.text-\[70px\]{
+  font-size: 70px !important;
+}
+.text-\[22px\]{
+  font-size: 22px !important;
 }
 .text-\[45px\]{
   font-size: 45px !important;
@@ -1205,6 +1268,10 @@ select{
 .text-purple-01{
   --tw-text-opacity: 1 !important;
   color: rgba(105, 105, 255, var(--tw-text-opacity)) !important;
+}
+.text-orange-01{
+  --tw-text-opacity: 1 !important;
+  color: rgba(248, 177, 93, var(--tw-text-opacity)) !important;
 }
 .text-green-01{
   --tw-text-opacity: 1 !important;
@@ -1407,6 +1474,24 @@ body::before{
 .hover\:translate-x-2:hover{
   --tw-translate-x: 0.5rem !important;
 }
+.hover\:-translate-y-1:hover{
+  --tw-translate-y: -0.25rem !important;
+}
+.hover\:translate-x-1:hover{
+  --tw-translate-x: 0.25rem !important;
+}
+.hover\:-translate-y-0\.5:hover{
+  --tw-translate-y: -0.125rem !important;
+}
+.hover\:translate-x-0\.5:hover{
+  --tw-translate-x: 0.125rem !important;
+}
+.hover\:-translate-y-0:hover{
+  --tw-translate-y: 0px !important;
+}
+.hover\:translate-x-0:hover{
+  --tw-translate-x: 0px !important;
+}
 .hover\:scale-125:hover{
   --tw-scale-x: 1.25 !important;
   --tw-scale-y: 1.25 !important;
@@ -1429,8 +1514,8 @@ body::before{
 .hover\:font-jumble:hover{
   font-family: jumble, sans-serif !important;
 }
-.hover\:text-\[25px\]:hover{
-  font-size: 25px !important;
+.hover\:text-\[22px\]:hover{
+  font-size: 22px !important;
 }
 .hover\:text-purple-01:hover{
   --tw-text-opacity: 1 !important;
@@ -1479,6 +1564,9 @@ body::before{
   .xl\:col-span-5{
     grid-column: span 5 / span 5 !important;
   }
+  .xl\:col-span-7{
+    grid-column: span 7 / span 7 !important;
+  }
   .xl\:col-span-1{
     grid-column: span 1 / span 1 !important;
   }
@@ -1525,6 +1613,9 @@ body::before{
   }
   .xl\:text-\[18px\]{
     font-size: 18px !important;
+  }
+  .xl\:text-\[36px\]{
+    font-size: 36px !important;
   }
   .xl\:leading-\[80px\]{
     line-height: 80px !important;

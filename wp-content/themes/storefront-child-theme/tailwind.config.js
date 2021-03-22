@@ -43,6 +43,9 @@ module.exports = {
           'green-03': {
             DEFAULT: '#d5e2d3',
           },
+          'orange-01': {
+            DEFAULT: '#F8B15D',
+          },
         },
         backgroundColor: {
           ...defaultColors,
@@ -67,6 +70,9 @@ module.exports = {
             },
             'green-03': {
               DEFAULT: '#d5e2d3',
+            },
+            'orange-01': {
+              DEFAULT: '#F8B15D',
             },
           },
         },
@@ -93,6 +99,9 @@ module.exports = {
             },
             'green-03': {
               DEFAULT: '#d5e2d3',
+            },
+            'orange-01': {
+              DEFAULT: '#F8B15D',
             },
           },
         },
