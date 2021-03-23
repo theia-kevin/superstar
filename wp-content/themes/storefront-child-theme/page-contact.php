@@ -6,21 +6,27 @@ get_header();
         </div>
     </div>
     <div class="pt-[100px] xl:pt-[200px] mb-[100px]"></div>
-    <div class="container mx-auto mb-[200px] px-4">
+    <div class="container mx-auto mb-[100px] xl:mb-[200px] px-4">
         <div class="grid grid-cols-12 h-[150px]">
-            <div class="col-span-12 xl:col-span-5 flex items-start">
-                <div class="font-jumble text-[70px] text-orange-01 uppercase"><?php the_field('contact_us_title'); ?></div>
+            <div class="col-span-12 xl:col-span-6 flex items-start">
+                <div class="font-jumble text-[53px] xl:text-[70px] text-orange-01 uppercase"><?php the_field('contact_us_title'); ?></div>
             </div>
-            <div class="col-span-12 xl:col-span-7 flex items-end flex-wrap">
-                <div class="font-sofia-pro-medium text-[22px] xl:text-[36px] text-orange-01 mr-[60px]"><?php the_field('contact_us_subtitle'); ?></div>
-                <a class="btn-yellow" href="<?php the_field('contact_us_link_url'); ?>"><?php the_field('contact_us_link_label'); ?></a>
+            <div class="col-span-12 xl:col-span-6 flex items-end">
+                <div class="grid grid-cols-12">
+                    <div class="col-span-8 flex items-center mr-[30px]">
+                        <div class="font-sofia-pro-medium text-[22px] xl:text-[36px] text-orange-01"><?php the_field('contact_us_subtitle'); ?></div>
+                    </div>
+                    <div class="col-span-4 flex items-center">
+                        <a class="btn-yellow" href="<?php the_field('contact_us_link_url'); ?>"><?php the_field('contact_us_link_label'); ?></a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <div class="container mx-auto relative z-10">
         <div class="absolute top-[-30px]">
             <div class="relative">
-                <img src="<?php echo get_field('contact_us_image')['url']; ?>" alt="">
+                <img class="object-contain" src="<?php echo get_field('contact_us_image')['url']; ?>" alt="">
                 <div class="absolute top-[100px] left-[100px]">
                     <div class="font-jumble text-white text-[22px] mb-[15px]"><?php the_field('contact_us_content_title_1'); ?></div>
                     <div class="font-sofia-pro-light text-white text-[16px] mb-[90px]"><?php the_field('contact_us_content_1'); ?></div>
@@ -30,7 +36,7 @@ get_header();
             </div>
         </div>
     </div>
-    <div class="h-[700px] w-full mb-[200px] relative z-0" id="map"></div>
+    <div class="h-[700px] w-full mb-[100px] xl:mb-[200px] relative z-0" id="map"></div>
 <?php get_template_part('template-parts/content', 'contact'); ?>
 <?php
 get_footer();

@@ -9,7 +9,7 @@ $menu_items = generateCustomMenu('primary');
     <div class="container mx-auto px-4 h-full flex flex-col justify-end">
         <div class="grid grid-cols-12">
             <div class="col-span-12 xl:col-span-3 py-[15px] xl:py-[0px] relative">
-                <img class="relative xl:absolute -top-8 left-0" src="<?php echo getCustomLogo()[0]; ?>" alt="">
+                <img class="object-contain relative xl:absolute -top-8 left-0" src="<?php echo getCustomLogo()[0]; ?>" alt="">
             </div>
             <div class="col-span-12 xl:col-span-3 py-[15px] xl:py-[0px] flex flex-col">
                 <div class="font-jumble text-[16px] text-white uppercase"><?php echo get_field('footer_quick_links_label',
@@ -41,7 +41,7 @@ $menu_items = generateCustomMenu('primary');
                 foreach (get_field('footer_social_icons', 'options') as $footer_social_icon) {
                     ?>
                     <a class="inline-block ml-[15px]" href="<?php echo $footer_social_icon['footer_social_url_link']; ?>">
-                        <img src="<?php echo $footer_social_icon['footer_social_icon_image']['url']; ?>" alt="">
+                        <img class="object-contain" src="<?php echo $footer_social_icon['footer_social_icon_image']['url']; ?>" alt="">
                     </a>
                     <?php
                 }
