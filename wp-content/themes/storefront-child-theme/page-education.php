@@ -20,8 +20,8 @@ get_header();
             if ($i % 2) {
                 ?>
                 <div class="grid grid-cols-12 mb-[100px]">
-                    <div class="col-span-12 pb-[40px] order-0 xl:order-0">
-                        <div class="font-jumble text-[60px] text-red-02 text-left leading-[60px] w-[450px] ml-auto"><?php echo $our_programmes_product['our_programmes_product_title']; ?></div>
+                    <div class="col-span-12 xl:col-start-8 pb-[40px] order-0 xl:order-0">
+                        <div class="font-jumble text-[60px] text-red-02 text-left leading-[60px] w-[450px]"><?php echo $our_programmes_product['our_programmes_product_title']; ?></div>
                     </div>
                     <div class="col-span-12 xl:col-span-6 order-2 xl:order-1">
                         <div class="font-sofia-pro-medium text-[36px] text-red-02 pb-[30px]"><?php echo $our_programmes_product['our_programmes_product_subtitle']; ?></div>
@@ -58,10 +58,10 @@ get_header();
     </div>
     <div class="container mx-auto mb-[100px] xl:mb-[200px] px-4">
         <div class="grid grid-cols-12">
-            <div class="col-span-12 xl:col-span-5 flex items-start">
+            <div class="col-span-12 xl:col-span-6 flex items-start">
                 <div class="font-jumble text-[120px] text-green-02"><?php the_field('ages_title'); ?></div>
             </div>
-            <div class="col-span-12 xl:col-span-5 flex items-end flex-wrap">
+            <div class="col-span-12 xl:col-span-6 flex items-end flex-wrap">
                 <div class="font-sofia-pro-medium text-[22px] xl:text-[36px] text-green-02 mr-[60px]"><?php the_field('ages_subtitle'); ?></div>
             </div>
         </div>
@@ -103,21 +103,21 @@ get_header();
                 }
                 ?>
             </div>
-            <div class="col-span-12 xl:col-start-8 xl:col-span-6">
+            <div class="col-span-12 xl:col-start-9 xl:col-span-6">
                 <div class="flex items-end h-full">
                     <div class="flex flex-col relative">
                         <div class="font-jumble text-[120px] text-orange-01 xl:pb-[100px]"><?php the_field('why_us_title'); ?></div>
                         <?php
                         foreach (get_field('why_us_products') as $why_us_product) {
                             ?>
-                            <div class="self-start cursor-pointer mb-[15px] text-black transition-all duration-500 hover:text-orange-01 h-[35px] hover:overflow-y-hidden" x-on:mouseenter.once="tab = '<?php echo $why_us_product['why_us_product_number']; ?>'">
-                                <span class="font-jumble text-[26px] transition-all duration-500 hover:font-jumble hover:text-[27px]"><?php echo $why_us_product['why_us_product_number']; ?>.</span>
-                                <span class="font-sofia-pro-medium text-[22px] transition-all duration-500 hover:font-jumble hover:text-[27px]"><?php echo $why_us_product['why_us_product_title']; ?></span>
+                            <div class="self-start cursor-pointer mb-[15px] text-black transition-all duration-300 hover:text-orange-01 h-[35px] hover:overflow-y-hidden" x-on:mouseenter.once="tab = '<?php echo $why_us_product['why_us_product_number']; ?>'">
+                                <span class="font-jumble text-[26px] transition-all duration-300 hover:font-jumble hover:text-[27px]"><?php echo $why_us_product['why_us_product_number']; ?></span>
+                                <span class="font-sofia-pro-medium text-[22px] transition-all duration-300 hover:font-jumble hover:text-[27px]"><?php echo $why_us_product['why_us_product_title']; ?></span>
                             </div>
                             <?php
                         }
                         ?>
-                        <div class="absolute bottom-[0px] left-[-120px]">
+                        <div class="absolute bottom-[0px] left-[-180px]">
                             <img class="object-contain" src="<?php echo get_field('why_us_product_arrow_image')['url']; ?>" alt="">
                         </div>
                     </div>
@@ -127,12 +127,12 @@ get_header();
     </div>
     <div class="container mx-auto mb-[100px] xl:mb-[200px] px-4">
         <div class="grid grid-cols-12 gap-y-[60px] xl:gap-[60px]">
-            <div class="col-span-12 xl:col-span-6">
+            <div class="col-span-12 xl:col-start-2 xl:col-span-5">
                 <div class="font-sofia-pro-light text-[14px] text-grey-02">
                     <?php the_field('why_us_content_1'); ?>
                 </div>
             </div>
-            <div class="col-span-12 xl:col-span-6">
+            <div class="col-span-12 xl:col-start-7 xl:col-span-5">
                 <div class="font-sofia-pro-light text-[14px] text-grey-02">
                     <?php the_field('why_us_content_2'); ?>
                 </div>

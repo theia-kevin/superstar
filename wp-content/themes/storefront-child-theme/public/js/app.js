@@ -11497,7 +11497,7 @@ var render = function() {
       "div",
       {
         staticClass:
-          "w-auto xl:w-[1100px] h-auto xl:h-[500px] mx-auto bg-green-02 rounded-3xl py-[75px] px-[75px]"
+          "w-auto xl:w-[1300px] h-auto xl:h-[500px] mx-auto bg-green-02 rounded-3xl py-[75px] px-[75px]"
       },
       [
         _c("div", { staticClass: "text-center pb-[30px]" }, [

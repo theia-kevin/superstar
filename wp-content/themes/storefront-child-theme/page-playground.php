@@ -32,9 +32,9 @@ get_header();
                         <?php
                         foreach (get_field('explore_products') as $explore_product) {
                             ?>
-                            <div class="self-start cursor-pointer mb-[15px] text-black transition-all duration-500 hover:text-blue-01 h-[35px] hover:overflow-y-hidden" x-on:mouseenter.once="tab = '<?php echo $explore_product['explore_product_number']; ?>'">
-                                <span class="font-jumble text-[26px] transition-all duration-500 hover:font-jumble hover:text-[27px]"><?php echo $explore_product['explore_product_number']; ?>.</span>
-                                <span class="font-sofia-pro-medium text-[22px] transition-all duration-500 hover:font-jumble hover:text-[27px]"><?php echo $explore_product['explore_product_title']; ?></span>
+                            <div class="self-start cursor-pointer mb-[15px] text-black transition-all duration-300 hover:text-blue-01 h-[35px] hover:overflow-y-hidden" x-on:mouseenter.once="tab = '<?php echo $explore_product['explore_product_number']; ?>'">
+                                <span class="font-jumble text-[26px] transition-all duration-300 hover:font-jumble hover:text-[27px]"><?php echo $explore_product['explore_product_number']; ?></span>
+                                <span class="font-sofia-pro-medium text-[22px] transition-all duration-300 hover:font-jumble hover:text-[27px]"><?php echo $explore_product['explore_product_title']; ?></span>
                             </div>
                             <?php
                         }
@@ -49,12 +49,12 @@ get_header();
     </div>
     <div class="container mx-auto mb-[100px] xl:mb-[200px] px-4">
         <div class="grid grid-cols-12 gap-y-[60px] xl:gap-[60px]">
-            <div class="col-span-12 xl:col-span-6">
+            <div class="col-span-12 xl:col-start-2 xl:col-span-5">
                 <div class="font-sofia-pro-light text-[14px] text-grey-02">
                     <?php the_field('explore_content_2'); ?>
                 </div>
             </div>
-            <div class="col-span-12 xl:col-span-6">
+            <div class="col-span-12 xl:col-start-7 xl:col-span-5">
                 <div class="font-sofia-pro-light text-[14px] text-grey-02">
                     <?php the_field('explore_content_3'); ?>
                 </div>

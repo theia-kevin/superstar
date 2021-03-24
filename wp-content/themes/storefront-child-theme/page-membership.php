@@ -11,9 +11,9 @@ get_header();
             <div class="col-span-12 xl:col-span-6 flex items-start">
                 <div class="font-jumble text-[53px] xl:text-[70px] text-orange-01 uppercase"><?php the_field('standard_fees_title'); ?></div>
             </div>
-            <div class="col-span-12 xl:col-span-6 flex items-end">
+            <div class="col-span-12 xl:col-start-7 xl:col-span-6 flex items-end">
                 <div class="grid grid-cols-12">
-                    <div class="col-span-8 flex items-center mr-[30px]">
+                    <div class="col-span-8 flex items-center mr-[60px]">
                         <div class="font-sofia-pro-medium text-[22px] xl:text-[36px] text-orange-01"><?php the_field('standard_fees_subtitle'); ?></div>
                     </div>
                     <div class="col-span-4 flex items-center">
@@ -33,7 +33,7 @@ get_header();
             <div class="col-span-12 xl:col-span-6">
                 <div class="relative inline-block">
                     <img class="object-contain" src="<?php echo get_field('playground_pricing_image')['url']; ?>" alt="">
-                    <div class="absolute top-[70px] xl:top-[120px] left-0 w-full">
+                    <div class="absolute top-[100px] xl:top-[120px] left-0 w-full">
                         <div class="w-[300px] xl:w-[400px] mx-auto">
                             <div class="flex justify-between border-b-2 border-white xl:mb-[15px]">
                                 <div class="font-jumble text-[22px] text-white"><?php the_field('playground_category_title'); ?></div>
@@ -85,7 +85,7 @@ get_header();
             <div class="col-span-12 xl:col-span-6 order-1 xl:order-0">
                 <div class="relative inline-block">
                     <img class="object-contain" src="<?php echo get_field('education_pricing_image')['url']; ?>" alt="">
-                    <div class="absolute top-[70px] xl:top-[120px] left-0 w-full">
+                    <div class="absolute top-[100px] xl:top-[120px] left-0 w-full">
                         <div class="w-[300px] xl:w-[400px] mx-auto">
                             <div class="flex justify-between border-b-2 border-white xl:mb-[15px]">
                                 <div class="font-jumble text-[22px] text-white"><?php the_field('education_category_title'); ?></div>
@@ -130,7 +130,7 @@ get_header();
                     </div>
                 </div>
             </div>
-            <div class="col-span-12 xl:col-start-8 xl:col-span-5 order-0 xl:order-1">
+            <div class="col-span-12 xl:col-start-8 xl:col-span-6 order-0 xl:order-1">
                 <div class="font-jumble text-[60px] text-orange-01 mb-[30px]"><?php the_field('education_title'); ?></div>
                 <div class="font-sofia-pro-light text-[16px] text-grey-02"><?php the_field('education_content'); ?></div>
             </div>
@@ -138,7 +138,7 @@ get_header();
     </div>
     <div class="container mx-auto mb-[100px] xl:mb-[200px] px-4">
         <div class="grid grid-cols-12">
-            <div class="col-span-12 xl:col-span-6">
+            <div class="col-span-12 xl:col-span-6 flex justify-center">
                 <img class="object-contain" src="<?php echo get_field('memberships_image')['url']; ?>" alt="">
             </div>
             <div class="col-span-12 xl:col-span-6">

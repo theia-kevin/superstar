@@ -1,6 +1,6 @@
 <template>
   <div class="container mx-auto mb-[200px] px-4">
-    <div class="w-auto xl:w-[1100px] h-auto xl:h-[500px] mx-auto bg-green-02 rounded-3xl py-[75px] px-[75px]">
+    <div class="w-auto xl:w-[1300px] h-auto xl:h-[500px] mx-auto bg-green-02 rounded-3xl py-[75px] px-[75px]">
       <div class="text-center pb-[30px]">
         <div class="font-jumble text-[45px] text-green-01 uppercase">{{ enquiry_title }}</div>
         <div class="font-sofia-pro-light text-[14px] text-green-01">{{ enquiry_subtitle }}</div>

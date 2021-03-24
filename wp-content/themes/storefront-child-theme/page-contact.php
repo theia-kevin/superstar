@@ -11,9 +11,9 @@ get_header();
             <div class="col-span-12 xl:col-span-6 flex items-start">
                 <div class="font-jumble text-[53px] xl:text-[70px] text-orange-01 uppercase"><?php the_field('contact_us_title'); ?></div>
             </div>
-            <div class="col-span-12 xl:col-span-6 flex items-end">
+            <div class="col-span-12 xl:col-start-7 xl:col-span-6 flex items-end">
                 <div class="grid grid-cols-12">
-                    <div class="col-span-8 flex items-center mr-[30px]">
+                    <div class="col-span-8 flex items-center mr-[60px]">
                         <div class="font-sofia-pro-medium text-[22px] xl:text-[36px] text-orange-01"><?php the_field('contact_us_subtitle'); ?></div>
                     </div>
                     <div class="col-span-4 flex items-center">
