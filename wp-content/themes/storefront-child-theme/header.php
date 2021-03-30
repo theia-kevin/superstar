@@ -47,7 +47,7 @@ $current_url = home_url( add_query_arg( array(), $wp->request ) );
                 <img class="object-contain h-[100px] self-center my-[15px] transition-all duration-300 hover:transform hover:scale-125" src="<?php echo getCustomLogo()[0]; ?>" alt="">
             </a>
             <div class="cursor-pointer flex items-center justify-end" @click.stop="sidebarOpen = true">
-                <svg class="h-10 w-10 text-white transition-all duration-300 hover:text-yellow-01 " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <svg class="h-10 w-10 text-white transition-all duration-300 hover:text-yellow-01" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
                 </svg>
             </div>
