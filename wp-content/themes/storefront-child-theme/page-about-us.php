@@ -10,7 +10,7 @@ get_header();
         </div>
     </div>
     <div class="pt-[400px] xl:pt-[600px] mb-[100px]"></div>
-    <div class="container mx-auto mb-[50px] xl:mb-[100px] px-4">
+    <div data-aos="fade-up" class="container mx-auto mb-[50px] xl:mb-[100px] px-4">
         <div class="grid grid-cols-12 mb-[100px]">
             <div class="col-span-12 pb-[40px] order-0 xl:order-0">
                 <div class="font-jumble text-[60px] text-red-02 text-left leading-[60px]"><?php the_field('who_we_are_title_1'); ?></div>
@@ -25,7 +25,7 @@ get_header();
             </div>
         </div>
     </div>
-    <div class="container mx-auto mb-[50px] xl:mb-[100px] px-4">
+    <div data-aos="fade-down" class="container mx-auto mb-[50px] xl:mb-[100px] px-4">
         <div class="flex flex-wrap justify-center">
             <?php
             foreach (get_field('who_we_are_products', get_the_ID()) as $who_we_are_product) {
@@ -44,7 +44,7 @@ get_header();
             ?>
         </div>
     </div>
-    <div class="container mx-auto mb-[100px] xl:mb-[200px] px-4">
+    <div data-aos="fade-up" class="container mx-auto mb-[100px] xl:mb-[200px] px-4">
         <div class="grid grid-cols-12 mb-[100px]">
             <div class="col-span-12 xl:col-span-6 order-1 xl:order-0 flex items-end justify-end xl:items-start xl:justify-start">
                 <img class="object-contain" src="<?php echo get_field('who_we_are_image_2')['url']; ?>" alt="">
@@ -56,7 +56,7 @@ get_header();
             </div>
         </div>
     </div>
-    <div class="container mx-auto mb-[100px] xl:mb-[200px] px-4">
+    <div data-aos="fade-down" class="container mx-auto mb-[100px] xl:mb-[200px] px-4">
         <div class="grid grid-cols-12">
             <div class="col-span-3 hidden xl:flex items-center justify-start">
                 <img class="object-contain" src="<?php echo get_field('our_values_image')['url']; ?>" alt="">
@@ -78,7 +78,11 @@ get_header();
             </div>
         </div>
     </div>
-<?php get_template_part('template-parts/content', 'news'); ?>
-<?php get_template_part('template-parts/content', 'contact'); ?>
+    <div data-aos="fade-up">
+        <?php get_template_part('template-parts/content', 'news'); ?>
+    </div>
+    <div  data-aos="fade-down">
+        <?php get_template_part('template-parts/content', 'contact'); ?>
+    </div>
 <?php
 get_footer();

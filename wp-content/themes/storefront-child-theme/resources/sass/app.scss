@@ -10,6 +10,11 @@
 @import '~aos/dist/aos.css';
 @import '~animate.css/animate.min.css';
 
+[data-aos="new-animation"] {
+  animation: bounce;
+  animation-duration: 1s;
+}
+
 body, button, input, select, textarea {
   font-family: $sofia-pro-light !important;
 }
@@ -165,4 +170,54 @@ body {
   hover:translate-x-1
   hover:shadow-xl
   cursor-pointer
+}
+
+.product_title {
+  font-family: jumble, sans-serif !important;
+  font-size: 53px !important;
+  text-transform: uppercase !important;
+  color: rgba(248, 177, 93, 1) !important;
+}
+
+.storefront-full-width-content.woocommerce-account .entry-header h1:last-child, .storefront-full-width-content.woocommerce-cart .entry-header h1:last-child, .storefront-full-width-content.woocommerce-checkout .entry-header h1:last-child, .storefront-full-width-content .woocommerce-products-header h1:last-child {
+  font-family: jumble, sans-serif !important;
+  font-size: 53px !important;
+  text-transform: uppercase !important;
+  color: rgba(248, 177, 93, 1) !important;
+}
+
+input[type="button"].alt, input[type="reset"].alt, input[type="submit"].alt, .button.alt, .widget-area .widget a.button.alt {
+  display: inline-block !important;
+  border-radius: 15px !important;
+  background-color: rgba(66, 205, 226, 1) !important;
+  padding: 6px 16px !important;
+  font-family: jumble, sans-serif !important;
+  font-size: 20px !important;
+  text-transform: uppercase !important;
+  color: rgba(251, 228, 119, 1) !important;
+  margin: 15px 0 !important;
+}
+
+button, input[type="button"], input[type="reset"], input[type="submit"], .button, .widget a.button {
+  display: inline-block !important;
+  border-radius: 15px !important;
+  background-color: rgba(66, 205, 226, 1) !important;
+  padding: 6px 16px !important;
+  font-family: jumble, sans-serif !important;
+  font-size: 20px !important;
+  text-transform: uppercase !important;
+  color: rgba(251, 228, 119, 1) !important;
+  margin: 15px 0 !important;
+}
+
+.added_to_cart.alt, .added_to_cart, .widget a.button.checkout {
+  display: inline-block !important;
+  border-radius: 15px !important;
+  background-color: rgba(66, 205, 226, 1) !important;
+  padding: 6px 16px !important;
+  font-family: jumble, sans-serif !important;
+  font-size: 20px !important;
+  text-transform: uppercase !important;
+  color: rgba(251, 228, 119, 1) !important;
+  margin: 15px 0 !important;
 }

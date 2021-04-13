@@ -11,7 +11,7 @@ get_header();
         </div>
     </div>
     <div class="pt-[400px] xl:pt-[600px] mb-[100px]"></div>
-    <div class="container mx-auto mb-[100px] xl:mb-[50px] px-4">
+    <div data-aos="fade-up" class="container mx-auto mb-[100px] xl:mb-[50px] px-4">
         <div class="grid grid-cols-12">
             <div class="col-span-12 xl:col-start-2 xl:col-span-5">
                 <div class="font-jumble text-[180px] text-blue-01 leading-none"><?php the_field('who_title'); ?></div>
@@ -26,7 +26,7 @@ get_header();
             </div>
         </div>
     </div>
-    <div class="container mx-auto mb-[100px] xl:mb-[200px] px-4" x-data="{ tab: '<?php echo get_field('who_products')[0]['who_product_number']; ?>' }">
+    <div data-aos="fade-down" class="container mx-auto mb-[100px] xl:mb-[200px] px-4" x-data="{ tab: '<?php echo get_field('who_products')[0]['who_product_number']; ?>' }">
         <div class="grid grid-cols-12">
             <div class="col-span-12 xl:col-span-6 flex items-end order-1 xl:order-0">
                 <?php
@@ -60,7 +60,7 @@ get_header();
             </div>
         </div>
     </div>
-    <div class="container mx-auto mb-[100px] xl:mb-[200px] px-4">
+    <div data-aos="fade-up" class="container mx-auto mb-[100px] xl:mb-[200px] px-4">
         <div class="grid grid-cols-12">
             <div class="col-span-12 xl:col-span-6 order-1 xl:order-0">
                 <img class="object-contain pt-[100px]" src="<?php echo get_field('what_image')['url']; ?>" alt="">
@@ -72,12 +72,13 @@ get_header();
             </div>
         </div>
     </div>
-    <div class="container mx-auto mb-[100px] xl:mb-[200px] px-4">
+    <div data-aos="fade-down" class="container mx-auto mb-[100px] xl:mb-[200px] px-4">
         <div class="grid grid-cols-12 gap-y-[60px] gap-x-[30px]">
             <?php
+            $index = 0;
             foreach (get_field('what_products') as $area_product) {
                 ?>
-                <div class="col-span-12 md:col-span-6 xl:col-span-3">
+                <div class="col-span-6 xl:col-span-3" x-data="{ hover_<?php echo $index ?> : false }" x-on:mouseover="hover_<?php echo $index ?> = true" x-on:mouseout="hover_<?php echo $index ?> = false">
                     <div class="relative">
                         <img class="object-contain w-full" src="<?php echo $area_product['what_product_image']['url']; ?>" alt="">
                         <div class="w-full absolute top-[45px] left-0 text-center">
@@ -89,15 +90,23 @@ get_header();
                                         20); ?></div>
                             </div>
                         </div>
+                        <div class="h-[64px] w-[64px] absolute left-1/2 bottom-[30px] transform translate-x-[-50%]">
+                            <div class="transition-all duration-300" x-bind:class="{ 'animate-bounce' : hover_<?php echo $index ?> == true }">
+                                <img class="object-contain object-cover h-full w-full" src="<?php echo $area_product['what_product_icon']['url']; ?>" alt="">
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <?php
+                $index++;
             }
             ?>
         </div>
     </div>
-    <?php get_template_part('template-parts/content', 'news'); ?>
-    <div class="container mx-auto mb-[50px] xl:mb-[100px] px-4">
+    <div data-aos="fade-up">
+        <?php get_template_part('template-parts/content', 'news'); ?>
+    </div>
+    <div data-aos="fade-down" class="container mx-auto mb-[50px] xl:mb-[100px] px-4">
         <div class="grid grid-cols-12">
             <div class="col-span-12 xl:col-span-5 flex items-start">
                 <div class="font-jumble text-[180px] text-green-02"><?php the_field('take_title'); ?></div>
@@ -108,7 +117,7 @@ get_header();
             </div>
         </div>
     </div>
-    <div class="container mx-auto mb-0 mb-[100px] xl:mb-[200px] px-4">
+    <div data-aos="fade-up" class="container mx-auto mb-0 mb-[100px] xl:mb-[200px] px-4">
         <div class="inline-grid grid-cols-2 grid-rows-4">
             <div class="row-start-1 row-span-2 xl:row-start-1 xl:row-span-3 flex items-end justify-end">
                 <img class="object-contain" src="<?php echo get_field('take_image_1')['url']; ?>" alt="">
@@ -124,7 +133,7 @@ get_header();
             </div>
         </div>
     </div>
-    <div class="container mx-auto mb-[100px] xl:mb-[200px] px-4">
+    <div data-aos="fade-down" class="container mx-auto mb-[100px] xl:mb-[200px] px-4">
         <div class="grid grid-cols-12">
             <div class="col-span-12 xl:col-span-5 order-1 xl:order-0">
                 <img class="object-obtain" src="<?php echo get_field('come_image')['url']; ?>" alt="">
@@ -139,6 +148,8 @@ get_header();
             </div>
         </div>
     </div>
-<?php get_template_part('template-parts/content', 'contact'); ?>
+    <div data-aos="fade-up">
+        <?php get_template_part('template-parts/content', 'contact'); ?>
+    </div>
 <?php
 get_footer();

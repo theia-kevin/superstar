@@ -6,24 +6,11 @@ get_header();
         </div>
     </div>
     <div class="pt-[100px] xl:pt-[200px] mb-[100px]"></div>
-    <div class="container mx-auto mb-[100px] xl:mb-[200px] px-4">
-        <div class="grid grid-cols-12 h-[150px]">
-            <div class="col-span-12 xl:col-span-6 flex items-start">
-                <div class="font-jumble text-[53px] xl:text-[70px] text-orange-01 uppercase"><?php the_field('standard_fees_title'); ?></div>
-            </div>
-            <div class="col-span-12 xl:col-start-7 xl:col-span-6 flex items-end">
-                <div class="grid grid-cols-12">
-                    <div class="col-span-8 flex items-center mr-[60px]">
-                        <div class="font-sofia-pro-medium text-[22px] xl:text-[36px] text-orange-01"><?php the_field('standard_fees_subtitle'); ?></div>
-                    </div>
-                    <div class="col-span-4 flex items-center">
-                        <a class="btn-yellow" href="<?php the_field('standard_fees_link_url'); ?>"><?php the_field('standard_fees_link_label'); ?></a>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div data-aos="fade-up" class="container mx-auto mb-[100px] xl:mb-[200px] px-4">
+        <div class="font-jumble text-[53px] xl:text-[70px] text-orange-01 uppercase"><?php the_field('standard_fees_title'); ?></div>
+        <div class="font-sofia-pro-medium text-[22px] xl:text-[36px] text-orange-01"><?php the_field('standard_fees_subtitle'); ?></div>
     </div>
-    <div class="container mx-auto mb-[100px] px-4">
+    <div data-aos="fade-left" class="container mx-auto mb-[100px] px-4">
         <div class="grid grid-cols-12 gap-y-[60px] xl:gap-y-0">
             <div class="col-span-12 xl:col-start-2 xl:col-span-4">
                 <div class="font-jumble text-[60px] text-orange-01 mb-[30px]"><?php the_field('playground_title'); ?></div>
@@ -80,7 +67,7 @@ get_header();
             </div>
         </div>
     </div>
-    <div class="container mx-auto mb-[100px] xl:mb-[200px] px-4">
+    <div data-aos="fade-up" class="container mx-auto mb-[100px] xl:mb-[200px] px-4">
         <div class="grid grid-cols-12 gap-y-[60px] xl:gap-y-0">
             <div class="col-span-12 xl:col-span-6 order-1 xl:order-0">
                 <div class="relative inline-block">
@@ -136,7 +123,7 @@ get_header();
             </div>
         </div>
     </div>
-    <div class="container mx-auto mb-[100px] xl:mb-[200px] px-4">
+    <div data-aos="fade-left" class="container mx-auto mb-[100px] xl:mb-[200px] px-4">
         <div class="grid grid-cols-12">
             <div class="col-span-12 xl:col-span-6 flex justify-center">
                 <img class="object-contain" src="<?php echo get_field('memberships_image')['url']; ?>" alt="">
@@ -148,7 +135,11 @@ get_header();
             </div>
         </div>
     </div>
-<?php get_template_part('template-parts/content', 'news'); ?>
-<?php get_template_part('template-parts/content', 'contact'); ?>
+    <div data-aos="fade-up">
+        <?php get_template_part('template-parts/content', 'news'); ?>
+    </div>
+    <div data-aos="fade-left">
+        <?php get_template_part('template-parts/content', 'contact'); ?>
+    </div>
 <?php
 get_footer();

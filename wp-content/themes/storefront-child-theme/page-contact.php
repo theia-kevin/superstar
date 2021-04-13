@@ -6,24 +6,11 @@ get_header();
         </div>
     </div>
     <div class="pt-[100px] xl:pt-[200px] mb-[100px]"></div>
-    <div class="container mx-auto mb-[100px] xl:mb-[200px] px-4">
-        <div class="grid grid-cols-12 h-[150px]">
-            <div class="col-span-12 xl:col-span-6 flex items-start">
-                <div class="font-jumble text-[53px] xl:text-[70px] text-orange-01 uppercase"><?php the_field('contact_us_title'); ?></div>
-            </div>
-            <div class="col-span-12 xl:col-start-7 xl:col-span-6 flex items-end">
-                <div class="grid grid-cols-12">
-                    <div class="col-span-8 flex items-center mr-[60px]">
-                        <div class="font-sofia-pro-medium text-[22px] xl:text-[36px] text-orange-01"><?php the_field('contact_us_subtitle'); ?></div>
-                    </div>
-                    <div class="col-span-4 flex items-center">
-                        <a class="btn-yellow" href="<?php the_field('contact_us_link_url'); ?>"><?php the_field('contact_us_link_label'); ?></a>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div data-aos="fade-up" class="container mx-auto mb-[100px] xl:mb-[200px] px-4 text-center">
+        <div class="font-jumble text-[53px] xl:text-[70px] text-orange-01 uppercase"><?php the_field('contact_us_title'); ?></div>
+        <div class="font-sofia-pro-medium text-[22px] xl:text-[36px] text-orange-01"><?php the_field('contact_us_subtitle'); ?></div>
     </div>
-    <div class="container mx-auto relative z-10">
+    <div data-aos="fade-down" class="container mx-auto relative z-10">
         <div class="absolute top-[-30px]">
             <div class="relative">
                 <img class="object-contain" src="<?php echo get_field('contact_us_image')['url']; ?>" alt="">
@@ -36,7 +23,9 @@ get_header();
             </div>
         </div>
     </div>
-    <div class="h-[700px] w-full mb-[100px] xl:mb-[200px] relative z-0" id="map"></div>
-<?php get_template_part('template-parts/content', 'contact'); ?>
+    <div data-aos="fade-up" class="h-[700px] w-full mb-[100px] xl:mb-[200px] relative z-0" id="map"></div>
+    <div data-aos="fade-down">
+        <?php get_template_part('template-parts/content', 'contact'); ?>
+    </div>
 <?php
 get_footer();
