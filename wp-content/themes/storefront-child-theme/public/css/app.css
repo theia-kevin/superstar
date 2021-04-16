@@ -783,6 +783,12 @@ select{
 .bottom-\[120px\]{
   bottom: 120px !important;
 }
+.left-1\/2{
+  left: 50% !important;
+}
+.bottom-\[30px\]{
+  bottom: 30px !important;
+}
 .top-0{
   top: 0px !important;
 }
@@ -806,18 +812,6 @@ select{
 }
 .left-\[-180px\]{
   left: -180px !important;
-}
-.left-1\/2{
-  left: 50% !important;
-}
-.bottom-0{
-  bottom: 0px !important;
-}
-.bottom-\[15px\]{
-  bottom: 15px !important;
-}
-.bottom-\[30px\]{
-  bottom: 30px !important;
 }
 .z-0{
   z-index: 0 !important;
@@ -955,6 +949,9 @@ select{
 .h-\[35px\]{
   height: 35px !important;
 }
+.h-\[64px\]{
+  height: 64px !important;
+}
 .h-\[300px\]{
   height: 300px !important;
 }
@@ -988,14 +985,14 @@ select{
 .h-5{
   height: 1.25rem !important;
 }
-.h-\[64px\]{
-  height: 64px !important;
-}
 .w-full{
   width: 100% !important;
 }
 .w-\[250px\]{
   width: 250px !important;
+}
+.w-\[64px\]{
+  width: 64px !important;
 }
 .w-10{
   width: 2.5rem !important;
@@ -1015,12 +1012,6 @@ select{
 .w-5{
   width: 1.25rem !important;
 }
-.w-\[150px\]{
-  width: 150px !important;
-}
-.w-\[64px\]{
-  width: 64px !important;
-}
 .max-w-xs{
   max-width: 20rem !important;
 }
@@ -1037,28 +1028,14 @@ select{
   --tw-scale-y: 1 !important;
   transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y)) !important;
 }
+.translate-x-\[-50\%\]{
+  --tw-translate-x: -50% !important;
+}
 .-translate-x-full{
   --tw-translate-x: -100% !important;
 }
 .translate-x-0{
   --tw-translate-x: 0px !important;
-}
-.translate-x-\[-50\%\]{
-  --tw-translate-x: -50% !important;
-}
-@-webkit-keyframes spin{
-  to{
-    transform: rotate(360deg);
-  }
-}
-@keyframes spin{
-  to{
-    transform: rotate(360deg);
-  }
-}
-.animate-spin{
-  -webkit-animation: spin 1s linear infinite !important;
-          animation: spin 1s linear infinite !important;
 }
 @-webkit-keyframes bounce{
   0%, 100%{
@@ -1087,6 +1064,20 @@ select{
 .animate-bounce{
   -webkit-animation: bounce 1s infinite !important;
           animation: bounce 1s infinite !important;
+}
+@-webkit-keyframes spin{
+  to{
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin{
+  to{
+    transform: rotate(360deg);
+  }
+}
+.animate-spin{
+  -webkit-animation: spin 1s linear infinite !important;
+          animation: spin 1s linear infinite !important;
 }
 .cursor-pointer{
   cursor: pointer !important;
@@ -1214,10 +1205,6 @@ select{
 .bg-indigo-600{
   --tw-bg-opacity: 1 !important;
   background-color: rgba(79, 70, 229, var(--tw-bg-opacity)) !important;
-}
-.bg-red-400{
-  --tw-bg-opacity: 1 !important;
-  background-color: rgba(248, 113, 113, var(--tw-bg-opacity)) !important;
 }
 .bg-cover{
   background-size: cover !important;
@@ -1491,10 +1478,6 @@ select{
 .text-purple-01{
   --tw-text-opacity: 1 !important;
   color: rgba(105, 105, 255, var(--tw-text-opacity)) !important;
-}
-.text-red-500{
-  --tw-text-opacity: 1 !important;
-  color: rgba(239, 68, 68, var(--tw-text-opacity)) !important;
 }
 .placeholder-green-01::-moz-placeholder{
   --tw-placeholder-opacity: 1 !important;
@@ -1997,12 +1980,6 @@ button, input[type=button], input[type=reset], input[type=submit], .button, .wid
   --tw-ring-offset-width: 2px !important;
 }
 
-@media (min-width: 768px){
-  .md\:col-span-6{
-    grid-column: span 6 / span 6 !important;
-  }
-}
-
 @media (min-width: 1280px){
   .xl\:absolute{
     position: absolute !important;
@@ -2169,8 +2146,5 @@ button, input[type=button], input[type=reset], input[type=submit], .button, .wid
   }
   .xl\:leading-\[25px\]{
     line-height: 25px !important;
-  }
-  .xl\:w-\[250px\]{
-    width: 250px !important;
   }
 }

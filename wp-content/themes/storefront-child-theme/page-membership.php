@@ -10,7 +10,7 @@ get_header();
         <div class="font-jumble text-[53px] xl:text-[70px] text-orange-01 uppercase"><?php the_field('standard_fees_title'); ?></div>
         <div class="font-sofia-pro-medium text-[22px] xl:text-[36px] text-orange-01"><?php the_field('standard_fees_subtitle'); ?></div>
     </div>
-    <div data-aos="fade-left" class="container mx-auto mb-[100px] px-4">
+    <div data-aos="fade-down" class="container mx-auto mb-[100px] px-4">
         <div class="grid grid-cols-12 gap-y-[60px] xl:gap-y-0">
             <div class="col-span-12 xl:col-start-2 xl:col-span-4">
                 <div class="font-jumble text-[60px] text-orange-01 mb-[30px]"><?php the_field('playground_title'); ?></div>
@@ -123,7 +123,7 @@ get_header();
             </div>
         </div>
     </div>
-    <div data-aos="fade-left" class="container mx-auto mb-[100px] xl:mb-[200px] px-4">
+    <div data-aos="fade-down" class="container mx-auto mb-[100px] xl:mb-[200px] px-4">
         <div class="grid grid-cols-12">
             <div class="col-span-12 xl:col-span-6 flex justify-center">
                 <img class="object-contain" src="<?php echo get_field('memberships_image')['url']; ?>" alt="">
@@ -138,7 +138,7 @@ get_header();
     <div data-aos="fade-up">
         <?php get_template_part('template-parts/content', 'news'); ?>
     </div>
-    <div data-aos="fade-left">
+    <div data-aos="fade-down">
         <?php get_template_part('template-parts/content', 'contact'); ?>
     </div>
 <?php
